@@ -1,0 +1,3147 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrreprt
+\begin_preamble
+\renewcommand{\maketitle}{}
+\usepackage{lmodern}
+
+% Correct superscripts 
+\usepackage{fnpct}
+
+
+\usepackage{calc} % Used for extra space below footsepline
+
+
+
+% Uncomment the next line for IEEE-style 
+% \usepackage[backend=biber, autocite=inline, style=ieee]{biblatex} 	% Use IEEE-Style (e.g. [1])
+
+% Uncomment the next line for alphabetic style 
+% \usepackage[backend=biber, autocite=inline, style=alphabetic]{biblatex} 	% Use alphabetic style (e.g. [TGK12])
+
+% Uncomment the next two lines vor Harvard-Style 
+%\usepackage[backend=biber, style=apa]{biblatex} 	
+%\DeclareLanguageMapping{german}{german-apa}
+
+
+
+
+%%% Uncomment the following lines to support hard URL breaks in bibliography 
+%\apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
+%\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
+%\setcounter{biburlucpenalty}{9000}% Großbuchstaben
+
+
+
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
+\makeatletter
+\usepackage[printonlyused]{acronym}
+\@ifpackagelater{acronym}{2015/03/20}
+  {%
+    \renewcommand*{\aclabelfont}[1]{\textbf{\textsf{\acsfont{#1}}}}
+  }%
+  {%
+  }%
+\makeatother
+
+%		LISTINGS
+\usepackage{listings}	%Format Listings properly
+\renewcommand{\lstlistingname}{Quelltext} 
+\renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
+\lstset{numbers=left,
+	numberstyle=\tiny,
+	captionpos=b,
+	basicstyle=\ttfamily\small}
+
+\usepackage{lipsum}    %Blindtext
+\usepackage{graphicx} % use various graphics formats
+\usepackage{xcolor}
+\usepackage[german]{varioref} 	% nicer references \vref
+\usepackage{caption}	%better Captions
+\usepackage{booktabs} %nicer Tabs
+\usepackage{array}
+%\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+
+%		ALGORITHMS
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\renewcommand{\listalgorithmname}{Algorithmenverzeichnis }
+\floatname{algorithm}{Algorithmus}
+
+
+
+
+%\RequirePackage[automark,headsepline,footsepline]{scrpage2}
+\RequirePackage[automark]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+%\renewcommand*{\pnumfont}{\upshape\sffamily}
+%\renewcommand*{\headfont}{\upshape\sffamily}
+%\renewcommand*{\footfont}{\upshape\sffamily}
+\renewcommand{\chaptermarkformat}{}
+\RedeclareSectionCommand[beforeskip=0pt]{chapter}
+\clearscrheadfoot
+
+%\ifoot[\rule{0pt}{\ht\strutbox+\dp\strutbox}DHBW Mannheim]{\rule{0pt}{\ht\strutbox+\dp\strutbox}DHBW Mannheim}
+%\ofoot[\rule{0pt}{\ht\strutbox+\dp\strutbox}\pagemark]{\rule{0pt}{\ht\strutbox+\dp\strutbox}\pagemark}
+%\ohead{\headmark}
+%\ifoot[\rule{0pt}{\ht\strutbox+\dp\strutbox}DHBW Mannheim]{\rule{0pt}{\ht\strutbox+\dp\strutbox}DHBW Mannheim}
+\ofoot[\rule{0pt}{\ht\strutbox+\dp\strutbox}\pagemark]{\rule{0pt}{\ht\strutbox+\dp\strutbox}\pagemark}
+\ohead{\headmark}
+\end_preamble
+\options BCOR=5mm,DIV=12,headinclude=on,footinclude=off,parskip=half,paper=a4,listof=entryprefix,toc=bibliography,pointlessnumbers
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "hidelinks=true"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_options autocite=inline
+\biblatex_bibstyle numeric
+\biblatex_citestyle numeric
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\branch Sperrvermerk
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Erklärung
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 3cm
+\rightmargin 2.5cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language=Java,keywordstyle={\bfseries\color{green!40!black}},commentstyle={\itshape\color{purple!40!black}},identifierstyle={\color{blue}},stringstyle={\color{orange}}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Titel der Arbeit: 
+\end_layout
+
+\end_inset
+
+Entwurf und Implementierung einer Vorlage zur Erstellung von wissenschaftlichen
+ Arbeiten im Studiengang Wirtschaftsinformatik
+\end_layout
+
+\begin_layout Author
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ihr Name: 
+\end_layout
+
+\end_inset
+
+Luca Musterperson
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+insertmatrikel}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ihre Matrikelnummer: 
+\end_layout
+
+\end_inset
+
+123456
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+insertfirma}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ihre Ausbildungsbetrieb: 
+\end_layout
+
+\end_inset
+
+Musterbetrieb AG
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+insertkurs}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ihr Kurs: 
+\end_layout
+
+\end_inset
+
+WWI20SEA
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+insertstudienrichtung}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ihre Studienrichtung: 
+\end_layout
+
+\end_inset
+
+Software Engineering
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+insertthesistype}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Art der Arbeit (Projektarbeit 1, Projektarbeit 2, Bachelorarbeit): 
+\end_layout
+
+\end_inset
+
+Bachelorarbeit
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatletter
+\backslash
+let
+\backslash
+inserttitle
+\backslash
+@title
+\backslash
+let
+\backslash
+insertauthor
+\backslash
+@author
+\backslash
+makeatother
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -1.5cm
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ihr Firmenlogo: 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/firmenlogo.jpg
+	lyxscale 30
+	height 2.2cm
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/logo.jpg
+	lyxscale 50
+	height 2.2cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\family sans
+
+\begin_inset VSpace 1.5cm
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\family sans
+\size large
+Duale Hochschule Baden-Württemberg Mannheim
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\family sans
+\series bold
+\size larger
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertthesistype
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\family sans
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+inserttitle
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset VSpace 1.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\family sans
+\series bold
+\size larger
+Studiengang Wirtschaftsinformatik
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\family sans
+\series bold
+Studienrichtung 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertstudienrichtung
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\family default
+
+\begin_inset Branch Sperrvermerk
+inverted 0
+status open
+
+\begin_layout Standard
+\noindent
+\align center
+
+\family sans
+\size larger
+Sperrvermerk
+\end_layout
+
+\end_inset
+
+
+\family sans
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\align center
+
+\family sans
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Verfassende Person:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertauthor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Matrikelnummer:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertmatrikel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Firma:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertfirma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Abteilung:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Softwareentwicklung
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Kurs:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertkurs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Studiengangsleitung:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Prof.
+ Dr.
+ Vorname Nachname
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Wissenschaftliche Betreuung:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Dr.
+ Maxi Mustermann
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+test@test.com
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
++49 151 / 123 456
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Firmenbetreuung:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Sascha Testname
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+test@test.com
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
++49 151 / 123 456
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+Bearbeitungszeitraum:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+01.01.1970 - 31.12.2099
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\backslash
+pagenumbering{roman}
+\backslash
+normalfont
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Sperrvermerk
+inverted 0
+status open
+
+\begin_layout Chapter*
+Sperrvermerk
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ein Sperrvermerk sollte nur bei berechtigtem Bedarf gesetzt werden!
+\family sans
+\series default
+
+\begin_inset VSpace 10pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Beachten Sie, dass mit Sperrvermerk versehene Arbeiten nicht für weitere
+ wissenschaftliche Zwecke außerhalb des Firmenkontextes oder zur Publikation
+ verwendet werden dürfen.
+\family sans
+\series default
+
+\begin_inset VSpace 10pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Wir empfehlen, wenn möglich, auf den Sperrvermerk zu verzichten.
+\family sans
+\series default
+
+\begin_inset VSpace 10pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Besprechen Sie diese Problematik mit Ihrer Firma!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Mustertext) Der Inhalt dieser Arbeit darf weder als Ganzes noch in Auszügen
+ Personen außerhalb des Prüfungsprozesses und des Evaluationsverfahrens
+ zugänglich gemacht werden, sofern keine anders lautende Genehmigung der
+ Ausbildungsstätte vorliegt.
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Danksagung
+\end_layout
+
+\begin_layout Standard
+Hier können Sie eine Danksagung schreiben.
+\end_layout
+
+\begin_layout Chapter*
+Kurzfassung (Abstract)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle" tabularwidth="100col%">
+<column alignment="left" valignment="top" width="25col%">
+<column alignment="left" valignment="top" width="70col%">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Titel:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+inserttitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Verfassende Person:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertauthor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kurs:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertkurs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ausbildungsstätte:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertfirma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hier können Sie die Kurzfassung der Arbeit schreiben.
+ Beispielsweise behandelt diese Arbeit eine Darstellung, wie die Bearbeitung
+ von wissenschaftlichen Texten auf Basis des \SpecialChar LaTeX
+-Textsatzsystems mit Nutzung
+ des \SpecialChar LyX
+-Editors umgesetzt werden kann.
+ Durch diesen exemplarischen Text werden sowohl einige grundlegende Möglichkeite
+n dargestellt, die sich durch Nutzung der Software ergeben, als auch einige
+ Hilfen gegeben, wie eine Umsetzung erfolgen kann.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand lstlistoflistings
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList algorithm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Addchap
+Abkürzungsverzeichnis
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{acronym}[WYSIWSM] % <- Das längste Acronym wird hier angegeben.
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+acro{BMBF}{Bundesministerium für Bildung und Forschung}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+acro{DHBW}{Duale Hochschule Baden-Württemberg}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+acro{RDMS}{Relational Database Management System}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+acro{URL}{Uniform Resource Locator}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+acro{WYSIWYM}{What You See Is What You Mean}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{acronym}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ihead{
+\backslash
+chaptername~
+\backslash
+thechapter} % Neue Header-Definition (inner header) 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ohead{
+\backslash
+headmark} % Neue Header-Definition (outer header) 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}  % Arabische Seitenzahlen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Gebrauchsanleitung
+\end_layout
+
+\begin_layout Section
+Übersicht über die Vorlage
+\end_layout
+
+\begin_layout Standard
+Diese Vorlage für wissenschaftliche Arbeiten im Studiengang Wirtschaftsinformati
+k an der Dualen Hochschule Baden-Württemberg 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+acs{DHBW})
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Hier musste das Akronym per Hand ausführlich geschrieben werden, da es sonst
+ sprachlich unpassend 
+\begin_inset Quotes gld
+\end_inset
+
+Duale Hochschule
+\begin_inset Quotes grd
+\end_inset
+
+ heißen würde.
+\end_layout
+
+\end_inset
+
+ wurde in \SpecialChar LyX
+
+\begin_inset CommandInset citation
+LatexCommand autocite
+key "lyx"
+literal "false"
+
+\end_inset
+
+ erstellt, einem graphischen 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ac{WYSIWYM}
+\end_layout
+
+\end_inset
+
+ Editor zum Textsatz-System \SpecialChar LaTeX
+, das auf \SpecialChar TeX
+
+\begin_inset CommandInset citation
+LatexCommand autocite
+key "texbook"
+literal "false"
+
+\end_inset
+
+ von Donald
+\begin_inset space ~
+\end_inset
+
+E.
+\begin_inset space ~
+\end_inset
+
+Knuth basiert.
+ Diese Vorlage wurde ursprünglich für \SpecialChar LaTeX
+ von Prof.
+\begin_inset space ~
+\end_inset
+
+Dr.
+\begin_inset space ~
+\end_inset
+
+Jörg
+\begin_inset space ~
+\end_inset
+
+Baumgart entwickelt und von Prof.
+\begin_inset space ~
+\end_inset
+
+Dr.
+\begin_inset space ~
+\end_inset
+
+Julian
+\begin_inset space ~
+\end_inset
+
+Reichwald und weiteren überarbeitet, und beinhaltet in dieser von Prof.
+\begin_inset space ~
+\end_inset
+
+Dr.
+\begin_inset space ~
+\end_inset
+
+Sebastian Ritterbusch aufbereiteten Form für \SpecialChar LyX
+ die folgenden in Tabelle
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Vorlage-Dateien"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ aufgelisteten Dateien:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="10cm">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Dateiname
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Beschreibung
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+thesis.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dieses Dokument, von dem alle anderen Dateien referenziert werden.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+bibliography.bib
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Die Literaturdatenbank – hier können Sie die verwendete Literatur einpflegen.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+img/logo.jpg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Das Logo der 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ac{DHBW}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+img/firmenlogo.jpg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ein exemplarisches Logo für eine Ausbildungsfirma.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+img/lyx-starting.png
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Die Oberfläche des \SpecialChar LyX
+-Editors mit diesem Dokument.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Vorlage-Dateien"
+
+\end_inset
+
+Übersicht über die Dateien der Vorlage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es werden – unter anderem – die folgenden Zusatzpakete von dieser Vorlage
+ eingezogen und sollten daher in aktuellen Versionen installiert sein:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\begin_inset CommandInset href
+LatexCommand href
+name "KOMA-Script"
+target "https://www.ctan.org/pkg/koma-script"
+literal "false"
+
+\end_inset
+
+
+\family default
+ bzw.
+ die Dokumentenklasse 
+\family typewriter
+scrreprt
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\begin_inset CommandInset href
+LatexCommand href
+name "hyperref"
+target "https://www.ctan.org/pkg/hyperref"
+literal "false"
+
+\end_inset
+
+
+\family default
+ für PDF-Informationen und Links
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\begin_inset CommandInset href
+LatexCommand href
+name "babel"
+target "https://www.ctan.org/pkg/babel"
+literal "false"
+
+\end_inset
+
+
+\family default
+ für länderspezifische Informationen
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\begin_inset CommandInset href
+LatexCommand href
+name "acronym"
+target "https://www.ctan.org/pkg/acronym"
+literal "false"
+
+\end_inset
+
+
+\family default
+ für das Erstellen des Abkürzungsverzeichnisses
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\begin_inset CommandInset href
+LatexCommand href
+name "listings"
+target "https://www.ctan.org/pkg/listings"
+literal "false"
+
+\end_inset
+
+
+\family default
+ für schöne Quelltexte
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\begin_inset CommandInset href
+LatexCommand href
+name "algorithm"
+target "https://www.ctan.org/pkg/algorithms"
+literal "false"
+
+\end_inset
+
+
+\family default
+ für schöne Algorithmen
+\end_layout
+
+\begin_layout Standard
+Bitte schauen Sie sich die entsprechenden Dokumentationen der Pakete an
+ (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.ctan.org/
+\end_layout
+
+\end_inset
+
+), um deren Verwendung und Möglichkeiten jenseits der hier gezeigten Beispiele
+ zu erlernen.
+\end_layout
+
+\begin_layout Section
+Verwendung von \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+Nach dem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ac{WYSIWYM}
+\end_layout
+
+\end_inset
+
+ Prinzip versucht der Editor nicht das resultierende Dokument auf einem
+ Bildschirm darzustellen, sondern ermöglicht eine möglichst sinnvolle und
+ pragmatische Darstellung der eigentlichen Inhalte.
+ Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Anfang-Vorlage"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ zeigt die ersten Zeilen dieser Vorlage, wo die grundlegenden Informationen
+ wie der Titel Ihrer Arbeit, Ihr Name und verschiedene andere Angaben vorgenomme
+n werden können.
+ Obwohl die Oberfläche graphisch orientiert ist, bleiben auch alle \SpecialChar LaTeX
+-Kommandos
+ zugänglich, wodurch die ursprüngliche Mächtigkeit des unterliegenden Textsatzsy
+stems erhalten wird.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/lyx-starting.png
+	lyxscale 50
+	width 70col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Anfang-Vorlage"
+
+\end_inset
+
+Der Anfang dieser \SpecialChar LyX
+ Vorlage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Übersetzung und Darstellung des Dokuments
+\end_layout
+
+\begin_layout Standard
+Die Übersetzung eines \SpecialChar LaTeX
+-Dokuments muss in mehreren Durchläufen erfolgen,
+ da die Positionierung von Absätzen, Bildern, Tabellen und auch welche Referenze
+n und Akronyme aufgeführt werden, erst nach mehreren Schritten aufgelöst
+ werden kann.
+ Dies wird in \SpecialChar LyX
+ automatisch ausgeführt, wenn im Menü oder per Tastenkombination
+ die Funktion 
+\family typewriter
+Dokument
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Ansehen
+\family default
+ ausgeführt wird.
+ Darauf wird ein Darstellungsprogramm gestartet, in dem das Dokument betrachtet
+ werden kann.
+ Änderungen im Quelltext werden erst in die Darstellung übernommen, wenn
+ per Tastendruck oder Menü die Funktion 
+\family typewriter
+Dokument
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Aktualisieren
+\family default
+ ausgeführt wird.
+ Es ist sehr empfehlenswert, dass während der Schreibphase der Schwerpunkt
+ auf dem Inhalt statt auf dem resultierenden Layout liegt.
+ Erst ganz am Ende sollten Gedanken auf die Verbesserung von Positionierungen
+ von Grafiken, oder Zeilen- und Seitenumbrüche verwendet werden, da im Großteil
+ die Algorithmen des Textsatzsystems von sich aus sehr gute und ansehnliche
+ Ergebnisse liefern werden.
+\end_layout
+
+\begin_layout Standard
+Sollen fertige Dokumente gespeichert oder verschickt werden, so bietet die
+ Funktion 
+\family typewriter
+Datei
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Exportieren
+\family default
+ eine Auswahl von verschiedenen Dateiformaten und Erzeugungsverfahren.
+ Das Dokument kann auch immer im \SpecialChar TeX
+-Format gespeichert werden, so dass es
+ mit Hilfe aller Quelldaten auch per Hand herkömmlich übersetzt und verarbeitet
+ werden kann.
+\end_layout
+
+\begin_layout Section
+Dokumente mit \SpecialChar LaTeX
+ und \SpecialChar LyX
+ schreiben
+\end_layout
+
+\begin_layout Standard
+Für das Schreiben von größeren oder komplexen Abhandlungen haben sich profession
+elle Textsatzsysteme etabliert.
+ Im ingenieurstechnischen und naturwissenschaftlichen Bereich nimmt \SpecialChar LaTeX
+ eine
+ ganz besonderes wichtige Rolle ein.
+ Da \SpecialChar LyX
+ als Oberfläche für dieses Textsatzsystem fungiert, ist es sehr sinnvoll,
+ zunächst die Grundlagen in der 
+\begin_inset CommandInset href
+LatexCommand href
+name "l2kurz-Anleitung"
+target "http://vesta.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/info/lshort/german/l2kurz.pdf"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand autocite
+key "l2kurz"
+literal "false"
+
+\end_inset
+
+ kennenzulernen.
+ Die dort aufgeführten Befehle und Methoden werden entweder direkt als \SpecialChar LaTeX
+-Befehle
+ im Text oder im Mathematik-Modus verwendet.
+\end_layout
+
+\begin_layout Standard
+Für das Schreiben von Fließtexten oder beispielsweise die Einbindung von
+ Bildern und Referenzen werden in \SpecialChar LyX
+ dann weitere Möglichkeiten angeboten,
+ die das schnelle und effiziente Arbeiten erleichtern.
+ Das Konzept der 
+\begin_inset Quotes gld
+\end_inset
+
+enviroments
+\begin_inset Quotes grd
+\end_inset
+
+ ist in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Anfang-Vorlage"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ als Auswahlfeld links oben zu erkennen.
+ Häufig wiederkehrende Aufgaben wie das Speichern, Rechtschreibprüfung,
+ Undo/Redo als auch das Einfügen von Tabellen, Formeln, sowie Formatierungen
+ und Ausrichtungen sind in den Symbolen daneben schnell abrufbar.
+\end_layout
+
+\begin_layout Section
+Optionale Dokumentenanteile
+\end_layout
+
+\begin_layout Standard
+Sollten von Seiten des Unternehmens über die grundsätzliche Vertraulichkeit
+ von studentischen Arbeiten an der 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ac{DHBW}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand autocite
+key "dhbw-vertraulichkeit"
+literal "false"
+
+\end_inset
+
+ hinaus die Arbeit einen Sperrvermerk benötigen, so können Sie den Zweig
+ durch sekundären Klick auf den Button neben dem Zweig aktivieren.
+ Analog können Sie die Erzeugung der Ehrenwörtlichen Erklärung auf der letzten
+ Seite durch die Deaktivierung des Zweigs für eine elektronische Fassung
+ über den Zweig deaktivieren.
+\end_layout
+
+\begin_layout Chapter
+Beispiele und Pakete
+\end_layout
+
+\begin_layout Section
+Verwendung von Akronymen
+\end_layout
+
+\begin_layout Standard
+Akronyme müssen vor Verwendung im Abkürzungsverzeichnis am Anfang des Dokuments
+ definiert werden.
+ Schauen Sie bei Fragen bitte die entsprechende Paket-Dokumentation an.
+ Ein definiertes Akronym kann dann mit dem Befehl 
+\family typewriter
+
+\backslash
+ac{}
+\family default
+ in einer durch 
+\family typewriter
+Command-L
+\family default
+ oder 
+\family typewriter
+ALT-L
+\family default
+ erreichbaren \SpecialChar LaTeX
+-Umgebung verwendet werden, so wird beispielsweise 
+\family typewriter
+
+\backslash
+ac{URL}
+\family default
+ bei erster Nutzung zu 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ac{URL}
+\end_layout
+
+\end_inset
+
+ ausgeschrieben, bei weiterer Verwendung wird dann nur die Kurzform 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ac{URL}
+\end_layout
+
+\end_inset
+
+ dargestellt, die aber im PDF-Dokument zur Erklärung noch angeklickt werden
+ kann.
+ Beachten Sie aber bitte, dass wenn ein Akronym nicht zu einem eigenständigen
+ Begriff geworden ist und nur sehr selten in Ihrem Dokument auftritt, so
+ sollten Sie die Verwendung überdenken und lieber die ausgeschriebene Fassung
+ verwenden.
+ 
+\end_layout
+
+\begin_layout Section
+Zitieren von Quellen
+\end_layout
+
+\begin_layout Standard
+Im Dokument 
+\family typewriter
+bibliography.bib
+\family default
+ verzeichnen Sie die Quellen samt bibliographischer Daten, die Sie im Dokument
+ zitieren möchten.
+ Durch Aufruf der Menü-Funktion 
+\family typewriter
+Einfügen
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Literaturverweis
+\family default
+ werden dann im Text Literaturangaben hinzugefügt, zu denen Sie jeweils
+ noch Zusatzangaben wie Seitennummern oder Hinweise wie 
+\begin_inset Quotes gld
+\end_inset
+
+Vgl.
+\begin_inset Quotes grd
+\end_inset
+
+ oder 
+\begin_inset Quotes gld
+\end_inset
+
+Siehe
+\begin_inset Quotes grd
+\end_inset
+
+ hinzufügen können.
+ Grundsätzlich müssen in wissenschaftlichen Arbeiten alle Aussagen entweder
+ in der Arbeit selbst belegt oder in einer referenzierten oder zitierten
+ Quellen nachgewiesen sein.
+ Der Großteil Ihrer Quellen sollten daher im Unterschied zu diesem Beispieltext
+ aus Lehrbüchern, renommierten Referenzen oder wissenschaftlichen Artikeln
+ bestehen.
+\end_layout
+
+\begin_layout Section
+Tabellen und Abbildungen
+\end_layout
+
+\begin_layout Standard
+Tabellen und Abbildungen sind sogenannte 
+\emph on
+Floating Objects
+\emph default
+ beziehungsweise 
+\emph on
+Floats
+\emph default
+, was bedeutet, dass \SpecialChar LaTeX
+ diese nach verschiedenen satztechnischen Regeln möglichst
+ sinnvoll positioniert.
+ Sie sollten diese zwar möglichst zum Absatz eingeben, wo diese Objekte
+ zentral betrachtet werden, sie können dann aber leicht auf der vorherigen
+ oder folgenden Seite auftauchen, je nachdem, wo die Darstellung sinnvoll
+ in den Text eingegliedert werden kann.
+ Keinesfalls sollten Sie frühzeitig versuchen eine bestimmte Positionierung
+ zu erzwingen oder gar 
+\emph on
+Floats
+\emph default
+ zu vermeiden, da sich die Gegebenheiten im Laufe der Textentwicklung noch
+ sehr stark verändern werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/firmenlogo.jpg
+	height 25theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LogoNett"
+
+\end_inset
+
+Ein besonders nettes Logo.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TD15"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Nettes Logo (Kurztitel für Abbildungsverzeichnis) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Beschreibungen der 
+\emph on
+Floats
+\emph default
+ legen Sie dann über den Befehl 
+\family typewriter
+Einfügen
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Marke...
+
+\family default
+ eine Bezeichnung fest, mit der das 
+\emph on
+Float
+\emph default
+ dann über einen 
+\family typewriter
+Einfügen
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Querverweis...
+
+\family default
+ referenziert werden kann.
+ So hat die Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LogoNett"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ die Kennung 
+\family typewriter
+fig:LogoNett
+\family default
+ und konnte so im Text referenziert werden.
+ Die Grafik selbst wird dann im 
+\emph on
+Float
+\emph default
+ über der Beschreibung mit 
+\family typewriter
+Einfügen
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Grafik...
+
+\family default
+ eingefügt.
+ Entsprechend wird eine Tabelle mit 
+\family typewriter
+Einfügen
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Tabelle...
+
+\family default
+ eingesetzt.
+ Alternativ können diese Funktionen auch über die Icons der Oberfläche aufgerufe
+n werden.
+ Der Absatz des Bildes oder der Tabelle wird häufig über 
+\family typewriter
+Bearbeiten
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Absatzeinstellungen...
+
+\family default
+ zentriert.
+ Die Größe von Bildern wird häufig in Prozent der Spaltenbreite angegeben,
+ bei Tabellen ist es oft sinnvoll einzelnen Spalten über 
+\family typewriter
+Bearbeiten
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Tabelleneinstellungen...
+
+\family default
+ eine feste Breite zuzuweisen, damit der Text in den Zellen der Zeilen dann
+ mehrzeilig umgebrochen werden kann.
+\end_layout
+
+\begin_layout Standard
+Soweit es möglich ist, sollten in Druckdokumenten bei Bildern bevorzugt
+ Vektorgrafiken zum Einsatz kommen.
+ Eine vektorielle Datei im 
+\family typewriter
+SVG
+\family default
+ oder 
+\family typewriter
+PDF
+\family default
+-Format kann ohne Qualitätsverlust auf die erforderliche Druckauflösung
+ skaliert werden und ist meist sehr datensparsam.
+ Rastergrafiken sollten im 
+\family typewriter
+JPG
+\family default
+ oder 
+\family typewriter
+PNG
+\family default
+-Format eingefügt werden, die eine ausreichende Auflösung und Qualität besitzen,
+ damit im Druck sich eine gute Darstellung ergibt.
+\end_layout
+
+\begin_layout Section
+Programmlistings
+\end_layout
+
+\begin_layout Standard
+Das Einbinden von Quellcode ist mit der Listings-Umgebung möglich.
+ Fügen Sie dazu mit Einfügen
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Programmlisting einen Eingabebereich wie Listing
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lis:Hello-World!"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ hinzu, dem Sie mit Einfügen
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Legende eine Beschreibung geben können.
+ Über die Einstellungen durch sekundären Klick auf den Eingabebereich können
+ Sie den Bereich dann auch zu einem 
+\emph on
+Float
+\emph default
+ wandeln.
+ In diesem Beispieldokument ist die Programmiersprache auf 
+\family typewriter
+Java
+\family default
+ vorgewählt, dies kann in 
+\family typewriter
+Dokument
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Einstellungen...
+
+\family default
+ sowohl allgemein als auch für jedes eigene Listing einzeln in dessen Einstellun
+gen umkonfiguriert werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "float"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public static void main(String args[]) 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+   System.out.println("Hello World!");
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "lis:Hello-World!"
+
+\end_inset
+
+Hello World!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Mathematische Formeln
+\end_layout
+
+\begin_layout Standard
+Auch mathematische Formeln können durch \SpecialChar LaTeX
+ in \SpecialChar LyX
+ im Mathematikmodus durch 
+\family typewriter
+ALT-M
+\family default
+ oder 
+\family typewriter
+COMMAND-M
+\family default
+, eventuell kombiniert mit 
+\family typewriter
+SHIFT
+\family default
+, sehr gut gesetzt werden, wie man anhand der Gleichungen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Gleichung-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ und
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Gleichung-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ sehen kann.
+ Konsultieren Sie dazu bitte die entsprechenden Dokumentationen wie 
+\family typewriter
+l2kurz
+\family default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "l2kurz"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align}
+\left|\frac{1}{N}\sum_{n=1}^{N}\gamma(u_{n})-\frac{1}{2\pi}\int_{0}^{2\pi}\gamma(t){\rm d}t\right| & \le\frac{\varepsilon}{3}\label{eq:Gleichung-1}\\
+f(x) & =x^{2}\label{eq:Gleichung-2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Algorithmen
+\end_layout
+
+\begin_layout Standard
+Sie können viele weitere \SpecialChar LaTeX
+-Pakete wie 
+\family typewriter
+algorithms
+\family default
+ verwenden, wie beispielsweise zur Darstellung von Algorithmen durch Pseudocode.
+ Dies ist entsprechend der Dokumentation des Pakets möglich und Sie können
+ diese dann in \SpecialChar LyX
+ referenzieren wie Algorithmus
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:euclid"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Procedure{Euclid}{$a,b$}
+\backslash
+Comment{The g.c.d.
+ of a and b}
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+State $r
+\backslash
+gets a
+\backslash
+bmod b$
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+While{$r
+\backslash
+not=0$}
+\backslash
+Comment{We have the answer if r is 0} 
+\backslash
+label{alg:euclid:while}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+State $a
+\backslash
+gets b$
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+State $b
+\backslash
+gets r$
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+State $r
+\backslash
+gets a
+\backslash
+bmod b$
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+EndWhile
+\backslash
+label{euclidendwhile}
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+State 
+\backslash
+textbf{return} $b$
+\backslash
+Comment{The gcd is b}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+EndProcedure
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Euklid'scher Algorithmus}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:euclid"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+bibparsep}{
+\backslash
+parskip}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "bibliography"
+options "bibtotoc"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendix
+\backslash
+ihead{
+\backslash
+appendixname~
+\backslash
+thechapter}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Testanhang
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lipsum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Unteranhang
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lipsum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Weiterer Anhang
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lipsum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Erklärung
+inverted 0
+status open
+
+\begin_layout Chapter*
+Ehrenwörtliche Erklärung
+\end_layout
+
+\begin_layout Standard
+Ich versichere hiermit, dass ich die vorliegende Arbeit mit dem Thema: 
+\emph on
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+inserttitle
+\end_layout
+
+\end_inset
+
+
+\emph default
+ selbstständig verfasst und keine anderen als die angegebenen Quellen und
+ Hilfsmittel benutzt habe.
+ Ich versichere zudem, dass die eingereichte elektronische Fassung mit der
+ gedruckten Fassung übereinstimmt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ort, Datum
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+insertauthor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

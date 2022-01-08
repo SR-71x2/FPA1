@@ -1,0 +1,64 @@
+% !TEX root =  master.tex
+\chapter{Primäre Forschungsfrage - Qualitativ}
+
+
+%#########################################################
+%#########################################################
+\if{false}
+\section{Planung aus RP}
+Die Beantwortung der primären Forschungsfrage beginnt mit einer Aufbereitung der bisherigen Forschung zu PCR-Pooling-Verfahren.
+Für die Validierung sind zwei Forschungsansätze denkbar:
+\begin{itemize}
+	\setlength{\itemsep}{-8pt}
+	\item Qualitativer Ansatz:
+	Die Disziplin der Kanalcodierung wird vorgestellt und auf Basis dieses wissenschaftlichen Frameworks die Pooling-Verfahren formalisiert.
+	Hierauf erfolgt eine argumentativ-deduktive Analyse, welche die Methode durch theoretische und qualitative Ansätze überprüft.
+	\item Quantitativer Ansatz:
+	Die Pooling-Verfahren werden in Software nachgebaut und quantitativ anhand einer Simulation analysiert.
+	Es werden unterschiedliche Grenzfälle getestet, um die Auswirkung auf das Verfahren zu beobachten.
+\end{itemize}
+
+\section{Obsidian Sammlung}
+\subsubsection{Kanalcodierung}
+\begin{itemize}
+	\item In der Raumfahrt ist Strahlung eines der Hauptprobleme, welche Bitflips
+	\footnote{Die binäre Änderung eines Speicherfeldes}
+	in Speichern auslösen kann.
+	Hierbei sind oftmals Fehler inakzeptabel, weswegen hochgradig redundante Systeme zum Einsatz kommen.
+	Es werden Teilweise ganze Systeme mehrfach verbaut, um die Ergebnisse zu vergleichen.
+	\item Ethernetpakete haben dieselbe Herausforderung wie die Raumfahrt, dass durch Störungen Bits verloren gehen können.
+	Üblicherwiese sind Ethernetpakete allerdings unkritischer, können erneut gesendet werden und die Strahlungsintensität ist geringer.
+	Deshalb werden hier Fehler nur erkannt, aber auf eine Korrektur verzichtet.
+	Beschädigte Pakete werden verworfen und müssen erneut gesendet werden.
+	\item Anhand der existierenden RAID-Level können die unterschiedlichen Ziele von Kanalcodierung veranschaulicht werden.
+	Zwischen Sicherheit, Verfügbarkeit und Berechnungsintensität muss eine Abwägung getroffen werden.
+	- Ein System kann wie bei RAID-0 zulasten seiner Integrität beschleunigt werden.
+	- Bei RAID-1 wird wie in der Raumfahrt eine volle Redundanz hergestellt. Die hohe Fehlertoleranz der Daten wird hierbei durch hohen Mehraufwand erkauft.
+	- RAID-5 und RAID-6 versuchen die Speicherkosten zu optimieren und eine dem Umstand angemessene Datensicherheit zu erreichen. Hierbei wird ein deutlicher Berechnungsaufwand für die Parität, eine lange Rebuild-Zeit und ein gewisses Ausfallrisiko in Kauf genommen.
+	\item Der Reed-Solomon-Code, welcher Beispielsweise in CDs eingesetzt wird, ist in der Lage Burst-Errors
+	\footnote{Fehler, welche nicht zufällig verteilt sind, sondern in Clustern auftreten.}
+	zu erkennen.
+	Bei CDs kann dies der Fall sein, wenn diese durch einen zusammenhängenden Kratzer beschädigt ist.
+	\item Der Hamming Code war einer der ersten ECC-Algorithmen und wurde in den 1950ern von Richard W. Hamming entwickelt.
+	Seine Verteilung der Paritäts-Bits ermöglicht eine effiziente Überprüfung der Daten.
+	Durch Verwendung von N+1 Paritäts-Bits, kann die Integrität von 2-hoch-N Daten zu überprüfen werden.
+	Die Berichtigung einzelner Bitfehler ist ebenfalls möglich.
+	Sollte mehr als ein Fehler innerhalb des Blocks auftreten, kann dieser zwar erkannt, aber nicht berichtigt werden.
+	Für einen Speicherbereich mit 256 Bit werden somit 8+1 Paritäts-Bits benötigt, was einem Overhead von nur 3,5 Prozent entspricht.
+	Neuere Algorithmen haben die Effizient weiter gesteigert und sollen im Laufe der Arbeit vergleichen werden.
+\end{itemize}
+
+\subsubsection{Erstellung eigener Modelle}
+Geprüft werden soll die Übertragbarkeit mehrerer in der Informatik gängigen ECC-Algorithmen auf den medizinischen Bereich.
+Die Theorie wäre, dass Covid-Infektionen bei anlasslosen Testungen wie auch Bitfehler selten sind.
+Somit könnten dieselben Algorithmen zur Effizienzsteigerung genutzt werden.
+Ziel ist es, eine Möglichkeit zu finden die exponentielle Effizienzsteigerung von ECC-Algorithmen auf medizinische Testungen anzupassen und hierdurch die Kosten deutlich zu reduzieren.
+Hierbei müssen Anpassungen an den Algorithmen vorgenommen werden und neue Herausforderungen beachtet werden.
+
+Beispielsweise sind bei einem 15-11-Hamming-Code nur 11/16 Bits echte Daten.
+Die Paritätsbits kosten hier direkt Speicherkapazität.
+Bei einer PCR-Testung wären theoretisch alle 16 Plätze verwendbar, da die Durchführung von PCR-Tests selbst (anders als bei Speicher) keine Plätze kostet.
+Desweiteren sind neue Probleme zu erwarten, wenn die Tests von Menschen durchgeführt werden.
+Hierbei entstehen Fehler, welche in den bisherigen Algorithmen keine Berücksichtigung finden mussten.
+
+\fi

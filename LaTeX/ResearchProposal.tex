@@ -1,0 +1,179 @@
+% !TEX root =  master.tex
+
+\chapter{Reserch Proposal vom 30.11.2021}
+\section{Problemstellung und Forschungsziel}
+Der Testung der Bevölkerung ist eine der wichtigsten Maßnahmen zur Pandemiebekämpfung.
+Zielführend wäre deshalb, hierbei die ungenauen Antigen-Schnelltests\footnote{WuerzburgStudie}
+durch das präziseren PCR-Verfahren\footnote{Polymerase Chain Reaction}
+zu ersetzen.
+Aktuell ist dies aufgrund der hierfür erforderlichen Laborkapazitäten und hohen Kosten nicht umsetzbar.\footnote{rki-bericht 2021}
+
+Die vorgesehene Arbeit hat zum Ziel, existierende Pooling-Verfahren zu überprüfen.
+Die Proben mehrerer Patienten werden hierbei kombiniert und gemeinsam getestet.
+Diese Verfahren bieten erhebliche Steigerungspotenziale für die Kapazitäten der PCR-Testungen.\footnote{Aertzeblatt}
+Bei der anlasslosen Massentestung könnte hierdurch eine Qualitätssteigerung erreicht werden.
+Identifiziert werden soll ein Pooling-Verfahren, welches diese Steigerung ohne signifikanten Qualitätsverlust ermöglicht.
+Ziel der Arbeit ist deshalb, Pooling-Methoden nach den folgenden Anforderungen zu prüfen:
+\begin{itemize}
+	\setlength{\itemsep}{-8pt}
+	\item Potenzial zur Erhöhung der Testkapazitäten
+	\item Robustheit gegen Fehlanwendung
+	\item Risiko von falschen Ergebnissen
+	\item Anwendbarkeit im betrieblichen Umfeld
+\end{itemize}
+
+Während der Pandemie haben sich viele Forschungsgruppen an Pooling-Verfahren gearbeitet.\footnote{viehweger increased 2020}
+Hierbei sind viele unterschiedliche Ansätze entstanden.\footnote{verwilt evaluation 2021}
+Die vorliegende Arbeit möchte diese Methoden zunächst analysieren und zu Clustern ähnlicher Verfahren aggregieren.
+Anschließend soll  eine Überprüfung auf Effizienz und Robustheit der unterschiedlichen Verfahren stattfinden.
+Hierfür sollen eine Simulation oder eine argumentativ-deduktive Analyse eingesetzt werden.
+
+\textbf{Primäres Forschungsziel}\newline
+Analyse existierender PCR-Pooling-Verfahren.\newline
+Überprüfung dieser Methoden auf Effizienz und Robustheit.
+
+\textbf{Sekundäres Forschungsziel}\newline 
+Erarbeitung einer Referenzimplementierung für das betriebliche Umfeld.\newline
+
+\section{Aktueller Stand der Wissenschaft}
+\subsection{Das PCR-Testverfahren}
+Um die Grundlagen für spätere Kapitel zu legen, soll zunächst die allgemeine Funktionsweise des PCR-Verfahrens erläutert werden.
+Die verfahrensüblichen Qualiätsmerkmale Sensitivität und Spezifität werden beschrieben und auf Ablauf sowie Logistik der Testungen eingegangen.
+
+Das PCR-Verfahren existierte bereits vor der COVID-19-Pandemie.
+Es wird seit 1983
+\footnote{wink pcr 1994}
+zur Erkennung von Viruserkrankungen eingesetzt.
+Sowohl wissenschaftliche Literatur\footnote{schmidt novel 2020}
+als auch praxisnahe Publikationen\footnote{wehrle weber pcr 1994}
+sind verfügbar.\footnote{clewley polymerase 1995}
+Forschungsrelevante Aussagen zur Wirksamkeit und Fehlerquote der Testung werden hierbei ausschließlich auf Quellen gestützt, welche die wissenschaftlichen Qualitätsstandards erfüllen.
+Für betriebswirtschaftliche und ablauforganisatorische Themenbereiche wird die Einbeziehung von praxisnahe Literatur als sinnvoll erachtet.
+
+\subsection{PCR-Pooling-Verfahren}
+PCR-Pooling-Verfahren wurden bereits vor der Pandemie zur Diagnose anderen Viruserkrankungen erfolgreich eingesetzt.
+\footnote{Aertzeblatt}
+Hierbei werden die Proben mehrerer Patienten vermischt, um durch einen gemeinsamen Test den Aufwand zu senken.
+Im Laufe der Pandemie wurden von vielen Forschungsgruppen und Laboren Methoden entwickelt, um PCR-Pooling durchzuführen.
+\footnote{calabrese how 2021}
+Zur Robustheit des PCR-Verfahren gegen Verwässerung der Proben und den Skalierungsmöglichkeiten gibt es widersprüchliche Aussagen.
+Einige Methoden empfehlen, dass maximal fünf Personen gemeinsam getestet werden.
+\footnote{schmidt novel 2020}
+Andere vermischen die Proben von 25-40 Patienten.
+\footnote{verwilt evaluation 2021}
+Das Ärzteblatt bescheinigt den Blutspendediensten die meiste Erfahrung mit PCR-Pooling-Verfahren.
+\footnote{Aertzeblatt}
+Um Blutspenden auf HIV und Hepatitis zu testen, kommen Pooling-Verfahren hier seit Jahrzehnten zum Einsatz.
+
+Ein Vergleich dieser Pooling-Studien und der erforschten Methoden wird ein Schwerpunkt dieses Kapitels.
+Ein Fokus ist hierbei die Fehleranfälligkeit der Tests bei unterschiedlichen Bedingungen und Verfahren.
+
+Die wissenschaftliche Artikel, welche den Verfahren zugrunde liegen, werden aufgrund der Tagesaktualität teilweise von Pre-Print-Servern stammen.\footnote{viehweger increased 2020}
+In diesen Fällen ist noch keinen Peer-Review erfolgt, weswegen diese Quellen besonders kritisch reflektiert und mit anderen Publikationen verglichen werden müssen.\footnote{verwilt evaluation 2021}
+Die Einhaltung des wissenschaftlichen Anspruchs wird durch den Vergleich der vielen Publikationen und auf Basis der zugrundeliegenden Literatur sichergestellt.
+Eine Validierung und Plausibilisierung der Methoden ist ohnehin im Rahmen der primären Forschungsfrage vorgesehen.
+
+\subsection{Methoden der Kanalcodierung}
+Ein Forschungsgebiet der Informatik ist die Integritätsprüfung von Speichern und Signalübertragungen.
+Die Forscher entwickeln Algorithmen, für die Erkennung und Berichtigung von Fehlern.\footnote{hamming information 1987}
+Die Anforderungen sind hierbei stark abhängig vom Anwendungsfall und der zu erwartenden Fehlerverteilung.\footnote{blahut algebraic 1992}
+
+Dieses Kapitel dient dazu, ein Verständnis für die Funktionsweise unterschiedlicher Codierungsverfahren zu vermitteln.
+Anhand von Beispielen werden die Unterschiede und Eigenschaften verschiedener Verfahren aufgezeigt.
+Verdeutlicht wird hierdurch, nach welchen Kriterien Codierungsverfahren bewertet und verglichen werden können.
+Aus der Kanalcodierung werden Anforderungen, Konzepte und Terminologie\footnote{dankmeier codierung 1994}
+für die Analyse der Pooling-Verfahren übernommen.
+
+Die Existenz dieses Kapitels ist noch ungewiss.
+Sein Zweck wäre, die theoretische Grundlage für eine argumentativ-deduktive Analyse der Pooling-Methoden zu liefern.
+Sollte diese Analyse zugunsten einer Simulation entfallen, ist dieses Kapitel obsolet.\footnote{Vgl. Gliederung der Arbeit}
+
+\section{Forschungsmethodik und Vorgehen}
+\subsection{Validierung der Modelle}
+Im vorherigen Kapitel wurden anhand von internationalen Studien Verfahren für das PCR-Pooling erarbeitet.
+Die ermittelten Modelle sollen in diesem Kapitel durch Forschungsmethoden der Wirtschaftsinformatik validiert werden.
+
+Bei mangelhafter Umsetzung einer Pooling-Methode, könnten die Fehlerrate der Testverfahren steigen oder Proben kontaminiert werden.
+Das Ergebnis wären ein Mehraufwand durch erneute Testung oder unentdeckte Fehldiagnosen.
+Ziel ist es, eine geeignete Methode und Skalierung zu finden und diese auf Robustheit gegen Fehlern zu überprüfen.
+Als Forschungsmethoden für die Validierung sind eine \textbf{Simulation} oder eine \textbf{argumentativ-deduktiven Analyse} vorgesehen.
+Hierbei sollen die Grenzen der beschriebenen Verfahren erforscht werden.
+
+Getestet werden sollen beispielsweise:
+\begin{itemize}
+	\setlength{\itemsep}{-8pt}
+	\item Unterschiedliche Infektionswahrscheinlichkeiten in der Testgruppe
+	\item Clusterbildung unter den Positivfällen
+	\item Falschergebnis einzelner (Teil-)Testungen
+	\item Kontaminierung der Proben
+	\item Fehler bei der Probenvermischung
+\end{itemize}
+
+Aus den verfügbaren Pooling-Verfahren des vorherigen Kapitels soll so ein möglichst effizientes und robustes Modell gewählt werden.
+Es sollen optimale Parameter für das Modell gefunden werden, um die in der Forschungsfrage formulierten Ziele zu erfüllen.
+
+Die Ergebnisse der Validierung werden gegebenenfalls als Anpassungen in die Modellen eingearbeitet.
+Dies soll die Grundlage für die Auswahl einer effizienten Methode sein, welche im Zuge der sekundären Forschungsfrage implementiert wird.
+
+\subsection{Implementierung im betrieblichen Umfeld}
+In diesem Kapitel soll eine Referenzimplementierung der erarbeiteten Modelle in das betriebliche Umfeld erstellt werden.
+Hierbei handelt es sich um die sekundäre Forschungsfrage.
+Die primären Forschung soll im Falle eines Ressourcenkonflikts priorisiert werden.\footnote{Vgl. Gliederung der Arbeit}
+
+In der Medizin sowie im betrieblichen Umfeld, funktioniert Skalierung grundsätzlich anders als in der Informatik.
+In der betrieblichen Umsetzung bedeutet die Verdopplung der Personenzahl einen massiven Mehraufwand bei Logistik und Organisation.
+Um die ermittelte Effizienzsteigerung in der Praxis zu erreichen, müssen die Abläufe fehlerfrei ausgeführt werden.
+Eine Aufgabe der Implementierung ist es, Risiken für operative Fehler minimieren.
+Erreicht werden kann dies durch betriebliche Abläufe, Dokumentation und die Reduzierung der Arbeitsschritte.
+Hierfür sollen praktische Empfehlungen gegeben werden.
+Zudem wird die Logistik und entstehende Kosten der Testung beschrieben.
+
+Dieses Kapitel wird sich auf einige Standardliteratur aus den Bereichen Prozess- und Ablauforganisation stützen.
+Im Schwerpunkt handelt es sich hierbei allerdings um ein induktives Kapitel mit dem Ziel, einen Ausblick auf mögliche Implementierungsstrategien zu geben.
+Eine abschließende Behandlung der betrieblichen Abläufe wird im Rahmen der Forschungsarbeit nicht möglich sein.
+Aufgrund der Individualität jedes Unternehmens sollen allgemeingültige Empfehlungen gegeben werden.
+
+\subsection{Zu erwartende Eigenbeiträge}
+Die wissenschaftliche Lage verändert sich im Rahmen der Corona-Pandemie nahezu täglich und es ist schwierig, hierzu einen nachhaltigen Beitrag zu leisten.
+Die vorgeschlagene Arbeit orientiert sich deshalb zwar am aktuellen Bedarf der pandemischen Lage - beschränkt sich jedoch nicht auf diesen.
+
+Weder das PCR-Testverfahren noch die Idee zum Pooling von Proben ist neu in der COVID-19-Pandemie entstanden.
+Diese Verfahren sind bewährt und werden auch nach der Pandemie noch zum Einsatz kommen.
+Die Forschung nutzt die Pandemie somit als Anhaltspunkt und Praxisbeispiel, in der Hoffnung einen kurzfristigen Beitrag leisten zu können.
+Die Ergebnisse sollen hierbei abstrahierbar für weitere Anwendungsfälle bleiben.
+
+\section{Gliederung der Arbeit}
+%\begin{figure}[h]
+%	\centering
+	%\includegraphics[height=.15\textwidth]{images/Untitled Diagram.drawio}
+	%\caption{Geplanter Aufbau der Arbeit\footnotemark}
+%\end{figure}
+
+\paragraph{Einleitung}
+Die Einleitung beginnt mit einer Beschreibung der Problemstellung und Zielsetzung der Arbeit.
+Hierauf folgen die Forschungsfragen, welche sich am Research Proposal orientieren.
+Am Ende des Einleitungskapitels wird das PCR-Verfahren im Allgemeinen vorgestellt, um eine Grundlage für die Bearbeitung der Forschungsfragen zu schaffen.
+
+\paragraph{Primäre Forschungsfrage}
+Die Beantwortung der primären Forschungsfrage beginnt mit einer Aufbereitung der bisherigen Forschung zu PCR-Pooling-Verfahren.
+Für die Validierung sind zwei Forschungsansätze denkbar:
+\begin{itemize}
+	\setlength{\itemsep}{-8pt}
+	\item Qualitativer Ansatz:
+	Die Disziplin der Kanalcodierung wird vorgestellt und auf Basis dieses wissenschaftlichen Frameworks die Pooling-Verfahren formalisiert.
+	Hierauf erfolgt eine argumentativ-deduktive Analyse, welche die Methode durch theoretische und qualitative Ansätze überprüft.
+	\item Quantitativer Ansatz:
+	Die Pooling-Verfahren werden in Software nachgebaut und quantitativ anhand einer Simulation analysiert.
+	Es werden unterschiedliche Grenzfälle getestet, um die Auswirkung auf das Verfahren zu beobachten.
+\end{itemize}
+
+\paragraph{Sekundäre Forschungsfrage und Ausblick}
+Die sekundäre Forschungsfrage ist die Implementierung der Methode im betrieblichen Umfeld.
+Der Umfang dieser Forschung wird flexibel dem Ressourcenbedarf der primären Forschungsfrage angepasst.
+Die Behandlung der Implementierung ist somit als eigenes Hauptkapitel denkbar.
+Alternativ erfolgt eine Kürzung als Ausblick nach dem Ergebnis.
+
+\paragraph{Ergebnis}
+Die Arbeit endet mit einem Kapitel, in welchem die Erlebnisse zusammengefasst und Handlungsempfehlungen gegeben werden.
+Es wird geprüft ob das Forschungsziel erreicht wurde und ob ein Optimierungspotenzial gegenüber den bisherigen Verfahren besteht.
+Abhängig vom vorherigen Kapitel folgt ein Ausblick.

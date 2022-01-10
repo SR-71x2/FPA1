@@ -15,7 +15,8 @@
 *.aux
 *.bbl
 *.blg
-*.pdf
+master.pdf
+hinweise-wissenschaftliche-arbeiten.pdf
 *.dvi
 *.acn
 *.acr

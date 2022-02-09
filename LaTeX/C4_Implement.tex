@@ -1,70 +1,58 @@
 % !TEX root =  master.tex
-\chapter{Implementierung in der betrieblichen Teststrategie}
-\section{Ort der Testdurchführung}
+\chapter{Betriebliche Implementierung}
+Da die primäre Hypothese in Kapitel XX widerlegt wurde, entfällt die Relevanz für die Erarbeitung einer umfassenden betrieblichen Teststrategie.
+Trotzdem bleibt festzuhalten, dass das PCR-Verfahren in der Schwerpunkttestung eine erhöhte Zuverlässigkeit gegenüber Schnelltests bietet.
+Anstelle einer umfassenden Implementierung werden deshalb Grundsätze für die Durchführung von PCR-Pooling diskutiert.
 
-\subsubsection{Pooling im Unternehmen}
+\textbf{Pooling im Unternehmen}\newline
 Das Pooling wird bei diesem Ansatz von Mitarbeitern des Unternehmens durchgeführt.
 Das Labor muss nicht einmal zwangsläufig wissen, dass Pooling durchgeführt wird.
-\footnote{Abhängig vom Grad der Verwässerung sollte diese Information mitgeteilt werden, um die Anzahl der Zyklen zu erhöhen.}
+Abhängig vom Grad der Verwässerung sollte diese Information allerdings mitgeteilt werden, um die Anzahl der Zyklen zu erhöhen.
 
-Keine Verarbeitung der Proben im Unternehmen aufgrund 
+Von einer Probenverarbeitung im Unternehmen birgt mehrere Risiken, welche durch eine Auswertung im Labor vermieden werden können.
+
 \begin{itemize}
-	\item Unsachgemäße Handhabung
-	\subitem Risiko der Ansteckung
-	\subitem Risiko von fehlerhafter Verarbeitung
-	\subitem Risiko der Kontamination der Probe
-	\item Effizenz
-	\subitem Geeigente Geräte im Labor
-	\subitem Höhere Geschwindigkeit
-	\subitem Routine in der Anwendung
+	\item \textbf{Unsachgemäße Handhabung}\newline
+	Für Mitarbeiter besteht ein Ansteckungsrisiko und die Proben könnten durch fehlerhafte Verarbeitung kontaminiert oder zerstört werden.
+	\item \textbf{Effizenz}\newline
+	Im Labor stehen geeignete Geräte und erfahrenes Personal zur Verfügung.
+	Durch die Routine können eine höhere Geschwindigkeit und Qualität erreicht werden.
 \end{itemize}
 
-Von einer Probenverarbeitung im Unternehmen wird deshalb abgeraten.
+Eine Verarbeitung im Unternehmen wird deshalb grundsätzlich nicht empfohlen.
+Unternehmen mit der Möglichkeit ein vollwertiges Labor einzurichten, sind hiervon ausgenommen.
 
-\subsubsection{Pooling im Labor}
+\textbf{Pooling im Labor}\newline
 Beim Pooling im Labor werden im Unternehmen nur die Proben entnommen, beschriftet und an das Labor gesendet.
 Hierdurch wird Arbeitsaufwand an das Labor verlagert und es wird ein Labor benötigt, welches das Pooling anbietet.
+Das Pooling wird hierdurch von medizinisch geschultem Personal mit angemessenen Werkzeugen durchgeführt.
+Eine Durchführung des Poolings im Labor wird deshalb empfohlen.
 
-Der deutliche Vorteil ist hierbei, dass das Pooling von Medizinisch geschultem Personal mit angemessenen Werkzeugen durchgeführt wird.
-Hierdurch ist von einer geringeren Fehlerquote, höherer Effizienz und einer Risikoreduktion im Umgang mit den möglicherweise kontaminierten Proben auszugehen.
-Eine Durchführung des Poolings im Labor wird deshalb nach Möglichkeit empfohlen.
+\cleardoublepage
 
-% Hier entfernen ans Ende der Pooling-Entwicklung?
-Auf der Evaluierung der Poolingmethoden wurden mathematisch sinnvolle Verfahren für die jeweiligen Inzidenzstufen ermittelt.
-Diese sollen nun um weitere Parameter erweitert werden, um ihre Tauglichkeit im betrieblichen Umfeld zu ermitteln.
+\textbf{Organisation im Unternehmen}\newline
+Bei der Auswahl der Poolgröße muss auf die Praktikabilität von Logistik und Organisiation geachtet werden.
 
-
-\section{Skalierung im betrieblichen Umfeld}
-Skalierung im Betrieblichen Umfeld funktioniert grundsätzlich anders als in der Informatik.
-Während große Speicherblöcke den Paritätsbedarf senken, ergibt sich durch die Vergrößerung einer Testgruppe ein deutlicher Mehraufwand an Logistik und Organisation. 
-Diese Aspekte sollen im vorliegenden Kapitel Beachtung finden.
-
-Grundsätzlich gibt es zwei Ansätze, das Pooling zu organisieren, welche nachfolgend kurz beschrieben werden.
-
-
-\subsubsection{Organisation im Unternehmen}
-Mitarbeiter bekommen persistenten Voucher-Barcode auf dem Alle Daten und auch Abteilung / Kontaktpersonen hinterlegt sind
-Ggf. Kontaktpersonen über Plattform oder auf Zettel mit Nr selbst angeben.
-
-Tests werden an MA verteilt oder zentral im Gebäude entnommen.
-Die Teströhren bekommen einen Barcode und gehen unverändert ins Labor.
+Bei Einführung des Systems könnte man allen Mitarbeitern Klebetiketten mit personalisiertem Barcode zusenden.
+Wenn die Person an einer Testung teilnimmt, bringt sie den Codeaufkleber mit und dieser wird auf das Teströhrchen geklebt.
+Die Tests werden gesammelt an das Labor gesendet und dort ausgewertet.
+Zurück übermittelt werden die Testergebnisse nach Barcodenummer.
+Die Ergebnisse können vom Unternehmen über die Nummer einer Person zugeordnet werden.
+Personenbezogene Daten verlassen nach diesem System nicht das Unternehmen.
+Zur Ermittlung von Kontaktpersonen könnten Abteilungen herangezogen werden oder die Mitarbeiter pflegen die Kontaktlisten selbst.
 
 Die Probenentnahme muss von einer geschulten Person beaufsichtigt werden, um Fehlanwendung und Missbrauch zu verhindert.
-Hierfür gibt es in vielen Betrieben bereits Personal, welches nach \footnote{§XXXX}
-für die Beaufsichtigung der 3G-Nachweise zugelassen ist.
+Hierfür gibt es in vielen Betrieben bereits Personal, welches für die Beaufsichtigung der 3G-Nachweise zugelassen ist.\footnote{§XXXX}
+Die Abfallmenge ließe sich durch reinigungsfähige Glasröhrchen und einen Flüssigkeitsbehälter gering halten.
 
-Die Teströhrchen müssen bereits im Unternehmen beschriftet werden, um die Ergebnisse später zuzuordnen.
-Hierbei bietet es sich an, eine nicht datenschutzrelevante Liste mit Personalnummern zu verwenden.
-Ggf. kann in Büros die Telefondurchwahl als Testnummer genutzt werden.
+\textbf{Ausstellung von Zerftikaten}\newline
+In den Corona-Verordnungen wird unterschieden zwischen Schnelltests und PCR-Tests.
+Mit dem Nachweis eines negativen PCR-Tests ist es möglich, zutritt zu veranstaltungen und Geschäften zu erhalten.
+Der Gesetzgeber trennt hierbei klar zwischen den präzisen PCR-Tests und ungenauen Schnelltests.\footnote{Verordnung PCR Schnelltest}
+Es ist anzunehmen, dass der Gesetzgeber hierbei kein oder nur ein schwaches Pooling eingerechnet hat.
 
-
-Müll durch Einmaltests beachten. ggf Glasröhrchen für Proben und abkochen.
-
-\subsubsection{Politische Ebene}
-Politisch ist anzumerken, dass bei den Corona-Schutzmaßnahmen zwischen präzissen PCR-Tests und ungenauen Schnelltests getrennt wird.
-Die Teilnahme an einigen Veranstaltungen ist somit nur mit PCR-Test zulässig.
-es kann unterstellt werden, dass der Gesetzgeber hierbei kein oder nur ein schwaches Pooling eingerechnet hat.
-Sollte durch die gewählte Pooling-Methode die Genauigkeit deutliche reduziert sein, sollten deshalb nur Schnelltest-Bescheinigungen an die negativ getesteten Personen ausgestellt werden.
+Durch das Pooling großer Gruppen, könnte die Erkennungsgenauigkeit des PCR-Tests reduziert sein.
+In diesen Fällen sollten nur Schnelltest-Bescheinigungen an die negativ getesteten Personen ausgestellt werden.
 \cleardoublepage
 
 

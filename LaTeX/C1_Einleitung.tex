@@ -1,83 +1,51 @@
 % !TEX root =  master.tex
 \chapter{Einleitung}
 \section{Problemstellung}
-Die Covid19-Pandemie ist zum aktuellen Zeitpunkt im Februar 2022 seit 23 Monaten ausgerufen.
-Mit unterschiedlichsten Maßnahmen wird versucht, die weitere Ausbreitung einzudämmen und die Kapazitäten des Gesundheitssystems in den kommenden Wintermonaten nicht zu überlasten.
+Die Covid19-Pandemie existiert zum Zeitpunkt dieser Arbeit seit über 2 Jahren.
+Mit unterschiedlichsten Maßnahmen wird versucht, die weitere Ausbreitung einzudämmen und die Kapazitäten des Gesundheitssystems nicht zu überlasten.
 Neben Impfungen und Masken zählen auch Einschränkungen des öffenlichen Lebens und die Nachverfolgung von Infektionsketten zu den ergriffenen Maßnahmen.
 
-Ein weiterer elementarer Baustein der Pandemiestrategie ist die anlassbezogene, aber auch anlasslose Massentestung der Bevölkerung auf Infektion mit dem neuartigen Coronavirus.
-Hierbei erfolgt die Massentestung üblicherweise mit Antigen-Schnelltests, während Verdachtsfälle über PCR-Tests überprüft werden.
+Ein weiterer elementarer Baustein der Pandemiestrategie ist die Massentestung der Bevölkerung auf Infektion mit SARS-CoV2.
+Hierbei erfolgt die anlasslose Massentestung üblicherweise mit Antigen-Schnelltests, während Verdachtsfälle über PCR-Tests überprüft werden.
 \footnote{(Quelle Verordnung)}
- Der Nachweis einer negativen Testung ist - alternativ zu einer Immunisierung - Voraussetzung für die Teilnahmen an vielen Bereichen des öffentlichen Lebens.
-
-Unternehmen sind aktuell verpflichtet Ihren Mitarbeitern zweimal pro Woche eine Testmöglichkeit zu bieten.
-Hierfür kommen nahezu ausschließlich Antigen-Schnelltests zum Einsatz.
-Diese Stückpreise schwanken hier zwischen (Betrag) Euro
-\footnote{(Onlinepreis)}
-und (Betrag) Euro.
-\footnote{(Onlinepreis)}
+Unternehmen testen ihre Mitarbeitern, um Infektionen frühzeitig zu erkennen und eine Verbreitung zu vermeiden.
+ Der Nachweis einer negativen Testung ist - alternativ zu einer Immunisierung - Voraussetzung für die Teilnahmen an vielen Bereichen des öffentlichen Lebens.\footnote{(Quelle Verordnung)}
 
 Die Sensitivität der Schnelltests ist allerdings nach aktueller Auffassung nicht ausreichend.
-Die Uni Würzburg testete die Sensitivität mehrerer Anbieter in XX/2021 und kam hierbei zu einer Sensitivität von 42,6 Prozent.
 Die Zulassungsstudien der Schnelltests zeigen eine sehr große Bandbreite in der Qualität.
 (Hersteller) erkennt selbst bei geringer Viruslast XX Prozent der Infektionen
 (Hersteller) dagegen zeigt selbst bei sehr hoher Virenlast nur XX Prozent der Infizierten richtig an.
 \footnote{Zerforschung Jan 2022}
 
-Aus diesem Grund erfordert die Corona-Verordnung-BW bei einem verstärkten Infektionsgeschehen in vielen Bereichen einen PCR-Test für ungeimpfte Personen.
-Die Erneute Aufnahme der Testung von geimpften Personen wurde kürzlich mit 2G-Plus für viele Veranstaltungen beschlossen.
-\footnote{Verordnung / Zeitung MPK}
+Im Frühjahr 2022 wurde die Kapazität für PCR-Testungen durch die Stark gestiegenen Infektionszahlen überschritten.
+Deshalb wurde die Möglichkeit für PCR-Testungen im Januar 2022 stark eingeschränkt.\footnote{Quelle neue Testverordnung}
+Das qualitativ hochwertigere PCR-Verfahren steht seitdem nur noch zur Überprüfung eines positiven Antigen-Schnelltests zur Verfügung.
+Diese erkennen allerdings wie oben ausgeführt nicht alle Infektionen, sodass diese Personen von einer Erkennung durch PCR ausgeschlossen sind.
 
-Die Uni Würzburg testete im XXXX 2021 die Produkte mehrerer Hersteller.
-Das Ergebnis war eine durchschnittliche Sensitivität von 42,6 Prozent.
-Die Entdeckungsrate ist abhängig von der Viruslast, welche wiederum von Variante, Impfstatus und Individuellem Verlauf abhängt.
-
-Neue Varianten können Anpassungen an Testverfahren sowie bei den Impfstoffen erfordern.
-
-\section{Zielsetzung}
-Bestehende Verfahren sollen analysiert und miteinander vergleichen werden.
-Im Laufe der Arbeit soll hierfür ein Kriterienkatalog entwickelt werden.
-
-Im Laufe der Pandemie wurden von vielen Forschungsgruppen und Laboren Methoden entwickelt, um PCR-Pooling durchzuführen. Die Skalierung ist hier sehr unterschiedlich und es gibt widersprüchliche Aussagen dazu, wie robust das PCR Verfahren gegen Verwässerung der Proben ist. Einige behaupten man könne maximal 5 Personen gemeinsam testen. Andere testen 25-40 gemeinsam.
-
-In Deutschland haben die größte Erfahrung die Blutspendedieste zu haben, da diese seit Jahrzehnten Pooling-Verfahren einsetzen um auf HIV und Hepatitis zu testen (Ärtzeblatt). Diese haben hierfür auch ein Patent angemeldet. Die Methode dieses Patents soll die Basis für den Vergleich anderer Verfahren sein.
+\section{Zielsetzung und Forschungsfrage}
+Im Laufe der Pandemie wurden von vielen Forschungsgruppen und Laboren Methoden entwickelt, um PCR-Pooling durchzuführen.
+Ziel der Arbeit ist es, die Kosten einer PCR-Testung zu senken und vorhandene Laborkapazitäten effizienter zu nutzen.
+Hierfür sollen PCR-Poolingmethoden überprüft und verglichen werden.
 
 \subsubsection{Forschungsfragen}
-\textbf{Primäres Forschungsziel}\newline
-Analyse existierender PCR-Pooling-Verfahren.\newline
-Überprüfung dieser Methoden auf Effizienz und Robustheit.
+Die Arbeit hat zum Ziel, die folgenden Forschungsfragen zu beantworten:
 
-\textbf{Sekundäres Forschungsziel}\newline 
-Erarbeitung einer Referenzimplementierung für das betriebliche Umfeld.\newline
-
-Neu Schreiben:
-Ermittlung von Kostensenkungspotenzialen bei der betrieblichen Testung durch PCR-Poolingverfahren.
-
-Ist es möglich, das PCR-Verfahren auf einer Kosten-Präzissions-Basis effizienter durchzuführen als Schnelltests.
-
-\subsubsection{Ziele dieser Arbeit}
-Erklärtes ziel dieser Arbeit ist es, eine alternative zu Antigen-Schnelltest aufzuzeigen.
-Die Rahmenbedingungen der bisherigen Testung sind somit
 \begin{itemize}
-	\item Sehr schnelle Anzeige des Ergebnisses
-	\item Sehr geringe Kosten - unter 1€ Materialaufwand pro Stück
-	\item Die Akzeptanz einer hohen Fehlerquote
-	\item Massenscreenings mit sehr geringer Prävalenz
+	\item \textbf{Lässt sich die Effizienz des PCR-Verfahren durch Pooling stark genug steigern, dass es eine wirtschaftliche Alternative für das Einsatzgebiet von Schnelltests bietet?}
+	\item \textbf{Wie könnte eine PCR-basierte Teststrategie im betrieblichen Umfeld realisiert werden?}
 \end{itemize}
 
+Die Hypothese der Arbeit ist, dass PCR durch Pooling effizienter sein kann als Schnelltests.
+Hierfür soll überprüft werden, wie sich die Kosten des PCR-Verfahrens durch Pooling entwickeln.
+Geprüft werden soll deshalb die Tauglichkeit für eine Massentestung.
+Hierbei ist vor allem ein geringer Preis ausschlaggebend.
+
 Um sich hiermit messen zu können, ist es notwendig die Prioritäten der PCR-Methode ähnlich festzulegen.
-Einschränkungen der Präzision sind akzeptabel, um preislich mit den ungenauen Schnelltests zu konkurrieren.
-Es ist außerdem eine für PCR-Verfahren unüblich niedrige Prävalenz zu erwarten, da normalerweise Verdachtsfälle mit PCR überprüft werden.
-
-Für die Ziele dieser Arbeit ist es somit erforderlich, eine große Poolgröße zu wählen.
-Diese ermöglicht eine Stärkere Kostenreduzierung.
+Für die Ziele dieser Arbeit ist es somit erforderlich, große Pools zu bilden um die notwendige Kostenreduzierung zu erreichen.
 Die Präzision fällt hierbei allerdings unter die Schwelle dessen, was üblicherweise für PCR als akzeptabel betrachtet wird.
+Durch die bereits diskutierte niedrige Erkennungsrate vieler Schnelltests, kann auch beim PCR-Pooling ein Verlust an Genauigkeit akzeptiert werden.
 
-\subsubsection{Politische Ebene}
-Politisch ist anzumerken, dass bei den Corona-Schutzmaßnahmen zwischen präzissen PCR-Tests und ungenauen Schnelltests getrennt wird.
-Die Teilnahme an einigen Veranstaltungen ist somit nur mit PCR-Test zulässig.
-es kann unterstellt werden, dass der Gesetzgeber hierbei kein oder nur ein schwaches Pooling eingerechnet hat.
-Sollte durch die gewählte Pooling-Methode die Genauigkeit deutliche reduziert sein, sollten deshalb nur Schnelltest-Bescheinigungen an die negativ getesteten Personen ausgestellt werden.
+Diese Hypothese dieser Arbeit wird als bestätigt betrachtet, wenn das PCR-Pooling bei vergleichbaren Kosten wie ein Schnelltest eine höhere Erkennungsrate bietet.
 
 %\subsubsection{Gang der Untersuchung}
 

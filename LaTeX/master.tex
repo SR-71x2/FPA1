@@ -81,7 +81,7 @@
 %\newcommand{\indextype}{ieee} 
 %
 % ALPHABETIC Style - e. g. [AB12]
-\newcommand{\indextype}{alphabetic} 
+%\newcommand{\indextype}{alphabetic} 
 %
 % HARVARD Style 
 %\newcommand{\indextype}{apa} 
@@ -92,14 +92,20 @@
 %%%%%%%%%%%%%%%%%%%%%%
 %% Position des Zitats
 %%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\position}{inline} 
+%\newcommand{\position}{inline} 
 %
 % (!!) FOOTNOTE POSITION NOT RECOMMENDED IN MINT DOMAIN:
 %\newcommand{\position}{footnote}
 
 %% Final: Setzen des Zitierstils und der Zitatposition
-\usepackage[backend=biber, autocite=\position, style=\indextype]{biblatex} 	
+\usepackage[
+backend=biber,
+autocite=footnote,
+bibstyle=apa, %Kopiert von RP
+style=apa
+]{biblatex} 	
 \settingBibFootnoteCite
+\addbibresource{bibliography.bib} %Kopiert von RP
 
 %%
 %% Definitionen und Commands
@@ -245,7 +251,10 @@
 % Alternative zu Verwendung von \initializeBibliography: Citavi ...
 % (dann \initializeBibliography auskommentieren und eigenes LaTex Coding verwenden)
 %
-\initializeBibliography
+%\ihead{}
+\printbibliography[title=\Literaturverzeichnis] 
+\cleardoublepage
+% Kopiert aus Config
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

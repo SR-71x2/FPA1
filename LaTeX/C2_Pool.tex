@@ -1,16 +1,40 @@
 % !TEX root =  master.tex
 \cleardoublepage
 \chapter{Grundlagen des PCR-Poolings}
-In diesem Kapitel sollten Methoden für das PCR-Pooling beschrieben werden.
-Begonnen wird mit einem einfachen, eindimensionalen Poolingverfahren als spätere Referenz.
-Kompliziertere Verfahren werden später erläutert um zu prüfen, ob hierdurch ein Mehrwert beobachtet werden kann.
-Hierdurch wird sichergestellt, dass das einfachstmögliche Verfahren angewandt wird.
-Umfangreiche Methoden werden nur weiter verfolgt, wenn sie das einfache Referenzverfahren übertreffen.
+In diesem Kapitel sollten die Grundlagen und Parameter für das PCR-Pooling beschrieben werden.
 
-\section{Eindimensionales Pooling}
-Das einfachste Verfahren für Pooling ist, eine eindimensionale Reihe von Proben zu verwenden und diese vor der PCR-Analyse zu kombinieren.
-Die Matrix lässt sich hierbei als 1xN beschreiben.
-Die Proben werden gemeinsam getestet.
+
+\section{Mögliche Poolgrößen und Erkennungsrate}%\newline
+Das PCR-Verfahren erlaubt grundsätzlich ein Pooling von mehreren Testpersonen.
+Die Proben der Patienten werden hierfür zu einem Pool zusammengefasst und gemeinsam getestet.
+Das PCR-Verfahren ist darauf ausgelegt, geringe DNA-Mengen zu einer nachweisbaren Menge zu vermehren.
+Die Verwässerung der Probe ist bis zu einem gewissen Punkt deshalb unproblematisch für den Nachweis.
+Auch eine (zu) hohe Verdünnung ist zulasten der Erkennungsrate problemlos möglich.
+Abgewogen werden muss hierbei die Priorisierung zwischen Präzision und Kostenersparnis.
+Eine Poolgröße von bis zu 20 Personen liegt laut Viehweger "comfortable above the detection rate"\footnote{Vieweger v1}
+Andere Gruppe halten Poolgrößen von bis zu 90 Personen für akzeptabel.\footnote{Quelle 2 Pooling Verwässerung}
+
+Es ist zu beachten, dass bei größeren Pools mehr Verdopplungsschritte notwendig sind, um dieselbe Virenmenge in der Probe zu erhalten.
+Beim Pooling von 16 Personen liegt beispielsweise eine um $2^{4}$ niedrigere Virenlast vor.
+Deshalb müssen 4 weitere Zyklen eingeplant werden.
+\footnote{Vieweger v1}
+
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+	%\centering
+	\includegraphics[width=.5\textwidth]{img/RKI_PCR_Positivrate}
+	\caption{Positivrate PCR-Tests\footnotemark}
+\end{wrapfigure}
+
+\section{Prävalenz}%\newline
+Die Prävalenz ist die Quote, mit welcher eine Krankheit in einer Stichprobe vorkommt.\footnote{Leon Gordis S37}
+Sie ist ähnlich der derzeit allgemein bekannteren Inzidenz, welche sich auf die Gesamtbevölkerung bezieht.
+Bei einer anlasslosen, repräsentativen Testung der Bevölkerung kann die Prävalenz eines Tests gleich der Inzidenz sein.
+Bei einer anlassbezogenen Testung werden allerdings meist deutlich höhere Prävalenzen beobachtet.
+Gemäß aktuellem RKI-Wochenbereicht sind zwischenzeitlich über 40 Prozent der PCR-Tests positiv.
+\footnote{RKI Wochenbericht}
+
+\section{Ergebnisinterpretation und Effizienz}
 \begin{itemize}
 	\item \textbf{Negatives Poolergebnis:}\newline
 	Ein negatives Gesamtergebnis bedeutet, dass \textbf{jede Einzelprobe negativ} war.
@@ -22,7 +46,7 @@ Die Proben werden gemeinsam getestet.
 	\item \textbf{Positives Poolergebnis:}\newline
 	Ein positives Gesamtergebnis bedeutet, dass \textbf{mindestens eine Einzelprobe positiv} war.
 	
-	In diesem Fall müssen weitere Tests durcheführt werden, um die positiven Einzelpersonen zu ermitteln.
+	In diesem Fall müssen weitere Tests durchgeführt werden, um die positiven Einzelpersonen zu ermitteln.
 	Die Tests erfolgen hierbei nacheinander und sind statistisch unabhängig voneinander.
 	
 	Die Nachtestung kann durch mehrstufiges Pooling optimiert werden.
@@ -31,115 +55,37 @@ Die Proben werden gemeinsam getestet.
 	
 	Im Falle einer Nachtestung wird somit ein initialer Test für den Pool benötigt, welcher positiv ausfällt.
 	Danach werden nochmal Tests für jede Einzelperson benötigt.
-	
 	Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen (N)}{1 Pooltest + N Einzeltests} $.
+	Die Testung erfolgt zweistufig.
+	
 \end{itemize}
 
+\section{Unklare Ergebnisse und Nachtestung}%\newline
+Durch Pooling besteht das Risiko, dass die Ergebnisse nicht für alle Testpersonen eindeutig interpretiert werden können.
+Hierdurch kann eine Nachtestung erforderlich werden.
+Wie häufig dies der Fall ist und welcher Anteil der Testgruppe nachuntersucht werden muss, ist abhängig vom gewählten Verfahren.
+Die Proben müssen ausreichend umfangreich sein, um genug Substanz für mehrere Testungen zu enthalten.
 
-Die Testung erfolgt zweistufig.
+Durch die erneute Testung verlängert sich der Zeitraum, bevor für alle Testpersonen das Ergebnis fest steht.
+Dies kann abhängig von der Situation in welcher der Test benötigt wird nicht akzeptabel sein.
+Manche Verfahren erfordern sogar mehrere sequenzielle Nachtestungen.
 
-Der Erwartungswert für die benötigte Anzahl der Tests lässt sich beschreiben als:
+\section{Verhinderung von Kontamination}%\newline
+Beim Pooling des ersten Durchlaufs muss darauf geachtet werden, die Proben untereinander nicht zu kontaminieren.
+Eine verunreinigung der Originalproben würde eine spätere Nachtestung unmöglich machen.
 
-Wenn(Pool Positiv)
-Dann -> N+1
-Andernfalls -> 1
+Um eine Kontamination durch das Pooling zu verhindern, sollte die komplette Matrix vor dem Pooling einmal dupliziert werden. 
+Die für den aktuellen Test notwendigen Proben werden hierbei entnommen und im Duplikat gepoolt.
+Für diesen Duplikationsschritt gibt es spezialisierte Laborgeräte, sodass dies in einem Arbeitsschritt für alle Proben durchgeführt werden kann.\footnote{https://www.genengnews.com/wp-content/uploads/2019/07/Eppendorf.jpg}
 
-Der erwartete Testbedarf hängt ab von der Wahrscheinlichkeit, dass der Pool positiv ist.
-Dieser lässt sich durch die prozentuale Angabe der Testprävalent ermitteln.
-
-Hieraus ergibt sich:
-%Erwartungswert Testbedarf = (P(Positiv) * N+1) + (!P(Positiv) * 1)
-%N/((MIN(1;N*Prävalenz)*(N+1))+(1-MIN(1;N*Prävalenz)))
-
-P(PoolPositiv) = $(min\left(1;Poolsize\cdot Pravalenz\right)$
-
-Erwartungswert Personen pro Test =
-$\frac{Poolsize}{P(PoolPositiv)\cdot (Poolsize + 1)) + (1 - P(PoolPositiv))}$
-
-Der Erwartungswert ist also abhängig von zwei Variablen: Der Prävalenz, welche zur Positivwahrscheinlichkeit des Pools führt, und der Testgröße, welche frei gewählt werden kann.
-
-Für jeden gegebene Testgröße lässt sich der Erwartungswert als abhängige Variable der Prävalenz darstellen.
-
-Unterschiedliche Testgrößen bilden hierbei unterschiedliche Kurvenverläufe.
-Allerdings muss nicht für den gesamten Prävalenzspektrum derselbe Test zum einsatz kommen.
-
-Für jede Prävalenz kann somit errechnet werden, welche Testgröße den optimalen Erwartungswert ergibt.
-
-Einen Effizienzwechsel findet man immer an den Schnittpunkten der Effizienzkurven.
-
-
-
-\cleardoublepage
-\subsubsection{Effizienzkurve Eindimensionale Pools}
-Für das eindimensionale Poolingverfahren ergibt sich insgesamt die folgende Effizienzkurve.
-
-Eine vollständige gegenüberstellung in tabellarischer Form ist im Anhang dargestellt.
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=.6\textwidth]{img/1D_Pool-EffKurve}
-	\caption{Effizienzkurve des eindimensionalen Poolingverfahrens\footnotemark}
+	\includegraphics[width=.45\textwidth]{img/Pipettenmatrix}
+	\caption{Pipettenautomat\footnotemark}
 \end{figure}
 
-Als logarithmische Tabelle bedeutet dies:
 
-\begin{tabular}{|c|c|}
-	\hline
-	Prävalenz (von 100.000) & Erwartungswert \\
-	\hline
-	1 & sdf \\
-	\hline
-	10 & sdf \\
-	\hline
-	100 & asdad \\
-	\hline
-	1.000 & sdfsd \\
-	\hline
-	10.000 & dfg \\
-	\hline
-	100.000 & dfg \\
-	\hline
-\end{tabular}
-
-\cleardoublepage
-\section{Zweidimensionales Pooling}
-Bei dieser Poolingmethode handelt es sich um einen zweidimensionalen Pool, mit dem Ziel, den Bedarf einer Nachtestung bei einzelnen Positivfällen zu minimieren.
-Die Testpersonen werden in einer AxB-Matrix angeordnet.
-Die Proben werden dann für jede Spalte und jede Reihe gepoolt.
-Allgemein formuliert lässt sich sagen:
-Testbedarf pro Person =
-$\frac{A+B}{A\cdot B}$
-
-Die Testgruppe lässt sich geometrisch als Rechteck beschreiben.
-Die Kanten A und B ergeben in Summe die benötigte Testanzahl.
-Die Fläche beschreibt die mögliche Anzahl der zu testenden Personen.
-Aus der Geometrie ist bekannt,\footnote{Geometrie Quadrat}
-dass das Verhältnis von Fläche zu Kantenlänge bei einem Quadrat optimal ist.
-Bei dieser Methode kommen somit nur Quardate als effizient infrage.
-Hierdurch lässt sich festlegen, dass $A=B$.
-
-Für eine Testgruppe von 25 Personen, welche in einer 5x5 Matrix angeordnet sind, werden somit 5+5 Tests benötigt.
-Die Effizienz läge bei 2,5 Personen pro Test.
-Vergleichen mit dem eindimensionalen Poolingverfahren klingt das zunächst nicht nach sehr viel.
-Allerdings ist dieses Verfahren darauf optimiert, robust gegen einzelne Positivfälle zu sein.
-Die Hypothese wäre somit, dass es bei hohen Prävalenzen einen Vorteil bietet, da nicht alle Testpersonen erneut getestet werden müssen.
-
-Die Wahrscheinlichkeit, dass der Pool positiv ist verändert sich zum anderen Testverfahren nicht.
-Sie hängt wieder von Prävalenz und Größe der Testgruppe ab.
-Deshalb gilt weiterhin:
-P(PoolPositiv) = $(min\left(1;Poolsize\cdot Pravalenz\right)$
-
-Bei der Nachtestung im Falle eines positiven Pools werden allerdings nicht mehr alle Personen nachgetestet.
-Sollte nur eine Person in der Testgruppe positiv sein, so kann dessen Position in der Testgruppe anhand der positiven Pools abgelesen werden.
-\begin{figure}[h]
-	\centering
-	\includegraphics[height=.25\textwidth]{img/2d_Pool_1Positiv}
-	\caption{Zweidimensionaler Pool mit einer positiven Person (Probe32). Die Pools A2 und B3 werden positiv und weisen auf die Position 3-2 der positiven Probe. Für die Hellrot unterlegten Personen liegt ein positiver und ein Negativer Pool vor.\footnotemark}
-\end{figure}
-
-Erwartungswert Personen pro Test =
-%$\frac{A\cdot A} {P(PoolPositiv)\cdot (Poolsize + 1)) + (1 - P(PoolPositiv))}$
-
-\subsubsection{Sicherheitsniveaus}
+\section{Sicherheitsniveaus}
 
 An dieser Stelle ist zu bemerken, dass es innerhalb der Testgruppe drei Kategorien von Testergebnis gibt.
 \begin{itemize}
@@ -158,7 +104,7 @@ Wie sollte man nun mit den Personen verfahren, die Teil eines positiven Pools wa
 	\item \textbf{Geringes Sicherheitsniveau} Die Personen für welche es keine Überschneidung gibt, werden als negativ gewertet. In einer perfekten Modellwelt mit 100 Prozent genauen Tests und keinen Anwendungsfehlern wäre auch dies unproblematisch. In der Realität können hierdurch aber falsch-negative Ergebnisse übermittelt werden.
 \end{itemize}
 
-\subsubsection{Mehrere Positivfälle}
+\section{Mehrere Positivfälle}
 
 Schwieriger wird es zudem, wenn mehrere Personen innerhalb des Pools positiv sind.
 Die Positiven Tests lassen sich dann nicht mehr exakt einer Person zuordnen.

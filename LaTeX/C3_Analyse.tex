@@ -3,36 +3,6 @@
 Auf der Evaluierung der Poolingmethoden wurden mathematisch sinnvolle Verfahren für die jeweiligen Inzidenzstufen ermittelt.
 Diese sollen nun um weitere Parameter erweitert werden, um ihre Tauglichkeit im betrieblichen Umfeld zu ermitteln.
 
-\section{Erwartungswert}
-Der Erwartungswert für die benötigte Anzahl der Tests lässt sich beschreiben als:
-
-Wenn(Pool Positiv)
-Dann -> N+1
-Andernfalls -> 1
-
-Der erwartete Testbedarf hängt ab von der Wahrscheinlichkeit, dass der Pool positiv ist.
-Dieser lässt sich durch die prozentuale Angabe der Testprävalent ermitteln.
-
-Hieraus ergibt sich:
-%Erwartungswert Testbedarf = (P(Positiv) * N+1) + (!P(Positiv) * 1)
-%N/((MIN(1;N*Prävalenz)*(N+1))+(1-MIN(1;N*Prävalenz)))
-
-P(PoolPositiv) = $(min\left(1;Poolsize\cdot Pravalenz\right)$
-
-Erwartungswert Personen pro Test =
-$\frac{Poolsize}{P(PoolPositiv)\cdot (Poolsize + 1)) + (1 - P(PoolPositiv))}$
-
-Der Erwartungswert ist also abhängig von zwei Variablen: Der Prävalenz, welche zur Positivwahrscheinlichkeit des Pools führt, und der Testgröße, welche frei gewählt werden kann.
-
-Für jeden gegebene Testgröße lässt sich der Erwartungswert als abhängige Variable der Prävalenz darstellen.
-
-Unterschiedliche Testgrößen bilden hierbei unterschiedliche Kurvenverläufe.
-Allerdings muss nicht für den gesamten Prävalenzspektrum derselbe Test zum einsatz kommen.
-
-Für jede Prävalenz kann somit errechnet werden, welche Testgröße den optimalen Erwartungswert ergibt.
-
-Einen Effizienzwechsel findet man immer an den Schnittpunkten der Effizienzkurven.
-
 \section{Eindimensionales Pooling}
 Begonnen wird mit einem einfachen, eindimensionalen Poolingverfahren als spätere Referenz.
 Kompliziertere Verfahren werden später erläutert um zu prüfen, ob hierdurch ein Mehrwert beobachtet werden kann.
@@ -42,7 +12,7 @@ Umfangreiche Methoden werden nur weiter verfolgt, wenn sie das einfache Referenz
 Das einfachste Verfahren für Pooling ist, eine eindimensionale Reihe von Proben zu verwenden und diese vor der PCR-Analyse zu kombinieren.
 Die Matrix lässt sich hierbei als 1xN beschreiben.
 Die Proben werden gemeinsam getestet.
-\cleardoublepage
+
 \subsubsection{Effizienzkurve Eindimensionale Pools}
 Für das eindimensionale Poolingverfahren ergibt sich insgesamt die folgende Effizienzkurve.
 
@@ -113,15 +83,23 @@ Sollte nur eine Person in der Testgruppe positiv sein, so kann dessen Position i
 Erwartungswert Personen pro Test =
 %$\frac{A\cdot A} {P(PoolPositiv)\cdot (Poolsize + 1)) + (1 - P(PoolPositiv))}$
 
+Die beiden positiven Personen (1-4 und 3-2) in Abb 3.3 lösen die Tests A2, A4, B1 und B3 aus.
+Neben den positiven Personen zeigen diese Tests auch auf die eigentlich negativen Proben 1-2 und 3-4.
+Aus diesem Grund müssen hier für zwei positive Personen vier Proben nachgetestet werden.
 
+Grundsätzlich verhält sich der Bedarf an Nachtestungen quadratisch zur Anzahl der Positiven Personen.
+Es ist allerdings möglich, dass mehrere positive Personen in einem Test sind.
+Durch diese Überschneidung verringert sich der Bedarf für Nachtestungen, weswegen eine Clusterung positiver Tests vorteilhaft sein kann.
+
+\cleardoublepage
 \section{Viehweger}
 Bei Poolgröße 20 und 2 Prozent Prävalenz Erreicht diese Methode eine Effizienzsteigerung um den Faktor 5.\footnote{Viehweger Z14}
 
 
-\section{Blutspendedienste}
+%\section{Blutspendedienste}
 In Deutschland haben die größte Erfahrung die Blutspendedieste zu haben, da diese seit Jahrzehnten Pooling-Verfahren einsetzen um auf HIV und Hepatitis zu testen (Ärtzeblatt). Diese haben hierfür auch ein Patent angemeldet. Die Methode dieses Patents soll die Basis für den Vergleich anderer Verfahren sein.
 
-\section{Forschungsgruppe 3}
+%\section{Forschungsgruppe 3}
 
 %\cleardoublepage
 

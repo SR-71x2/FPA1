@@ -131,45 +131,37 @@ Hierduch werden bereits drei sequenzielle Durchläufe notwendig
 Die Übermittlung des Testergebnisses wird hierdurch stark verzögert, was ebenfalls Probleme verursachen kann.
 
 \section{Ermittlung des Erwartungswertes}
-\textbf{Effizienz}\newline
-Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen (N)}{Anzahl Tests (1)} $.
-Die Nachtestung kann durch mehrstufiges Pooling optimiert werden.
-Für das einfachste Basisverfahren wird allerdings angenommen, dass nach einem Positivergebnis das Pooling beendet wird.
-Die Personen innerhalb des positiven Pools werden einzeln nachgetestet.\footnote{Viehweger Zeile 11}
+\begin{wrapfigure}{r}{0.4\textwidth}
+	%\centering
+	\includegraphics[width=.4\textwidth]{img/EffizienzNegativ}
+	\caption{Effizienz eines \newline negativen Pools}
+	
+	\includegraphics[width=.4\textwidth]{img/EffizienzPositiv}
+	\caption{Effizienz eines \newline positiven Pools}
+\end{wrapfigure}
 
-Im Falle einer Nachtestung wird somit ein initialer Test für den Pool benötigt, welcher positiv ausfällt.
+Als \textbf{Effizienz} einer Poolingmethode wird nachfolgend der Multiplikator bezeichnet, welcher gegenüber Einzeltestungen erzielt werden kann.
+Diese ist Abhängig von der Größe der Testgruppe und der Anzahl der Tests die erforderlich sind um den Infektionsstatus jeder Person zu klassifizieren.
+Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen}{Anzahl Tests} $.
+
+Im bestmöglichen Fall ist die gesamte Testgruppe nicht infiziert.
+Hierdurch fallen im ersten Durchlauf alle Tests negativ aus und die gesamte Testgruppe kann als negativ markiert werden.
+Im Beispiel der Abbildung X.X ergibt sich eine Effizienz von 3.
+
+Im Falle einer Nachtestung wird ein initialer Test für den Pool benötigt, welcher positiv ausfällt.
 Danach werden nochmal Tests für jede Einzelperson benötigt.
 Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen (N)}{1 Pooltest + N Einzeltests} $.
+Für den Positivfall liegt die Effizienz also bei 0,75.
+Das Ergebnis ist damit schlechter als wenn direkt einzeln getestet worden wäre, da zuerst ein zusätzlicher Pooltest verwendet wurde.
 
-\textbf{Erwartungswert}\newline
-Der Erwartungswert für die benötigte Anzahl der Tests lässt sich beschreiben als:
+Für den Vergleich von Teststrategien ist der \textbf{Erwartungswert für die Effizienz} relevant.
+Die benötigte Anzahl der Tests ist abhängig vom Ergebnis der Pooltests.
+Wenn alle Ergebnisse negativ sind, ist die Effizienz 3. Wenn das Poolergebnis positiv ist, liegt die Effizienz bei nur 0,75.
+Der Erwartungswert ergibt sich aus diesen beiden Szenarien, gewichtet nach ihrer Eintrittswahrscheinlichkeit.
+Die Wahrscheinlichkeit, dass jemand innerhalb der Testgruppe Infiziert ist, hängt von der Prävalenz und der Größe der Testgruppe ab.
 
-Wenn(Pool Positiv)
-Dann -> N+1
-Andernfalls -> 1
-
-Der erwartete Testbedarf hängt ab von der Wahrscheinlichkeit, dass der Pool positiv ist.
-Dieser lässt sich durch die prozentuale Angabe der Testprävalent ermitteln.
-
-Hieraus ergibt sich:
-%Erwartungswert Testbedarf = (P(Positiv) * N+1) + (!P(Positiv) * 1)
-%N/((MIN(1;N*Prävalenz)*(N+1))+(1-MIN(1;N*Prävalenz)))
-
-P(PoolPositiv) = $(min\left(1;Poolsize\cdot Pravalenz\right)$
-
-Erwartungswert Personen pro Test =
-$\frac{Poolsize}{P(PoolPositiv)\cdot (Poolsize + 1)) + (1 - P(PoolPositiv))}$
-
-Der Erwartungswert ist also abhängig von zwei Variablen: Der Prävalenz, welche zur Positivwahrscheinlichkeit des Pools führt, und der Testgröße, welche frei gewählt werden kann.
-
-Für jeden gegebene Testgröße lässt sich der Erwartungswert als abhängige Variable der Prävalenz darstellen.
-
-Unterschiedliche Testgrößen bilden hierbei unterschiedliche Kurvenverläufe.
-Allerdings muss nicht für den gesamten Prävalenzspektrum derselbe Test zum einsatz kommen.
-
-Für jede Prävalenz kann somit errechnet werden, welche Testgröße den optimalen Erwartungswert ergibt.
-
-Einen Effizienzwechsel findet man immer an den Schnittpunkten der Effizienzkurven.
-
+Bei einer Prävalenz von 10 Prozent und drei statistisch unabhängigen Testpersonen, liegt die Wahrscheinlichkeit für einen Positivfall bei 30 Prozent. \textbf{Statistik prüfen}
+Die Effizienz liegt also mit einer Wahrscheinlichkeit von 30 Prozent bei 0,75 und mit einer Wahrscheinlichkeit von 70 Prozent bei 3,0.
+Daraus ergibt sich unter diesen Parametern eine gewichtete Effizienz für das Verfahren von 2,325.
 
 \cleardoublepage

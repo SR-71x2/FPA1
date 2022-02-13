@@ -1,5 +1,43 @@
 % !TEX root =  master.tex
 \chapter{Analyse und Bewertung von Poolingmethoden}
+Im vorherigen Kapitel wurde aufgezeigt, dass die Effizienz einer Poolingmethode von zwei Parametern abhängt:
+\begin{itemize}
+	\item Der Prävalenz, woraus sich die Wahrscheinlichkeit für infizierte Personen ergibt
+	\item Der Testgröße, welche frei gewählt werden kann.
+\end{itemize}
+In Kombination ergeben diese beiden Werte die Wahrscheinlichkeit, mit welcher Infizierte Personen innerhalb der Testgruppe sind.
+
+Für jeden gegebene Kombination aus Testgröße und Prävalenz lässt sich somit der Erwartungswert als abhängige Variable darstellen.
+Wenn man eine der Variablen als Rahmenbedingung festsetzt, lässt sich der andere Wert gemeinsam mit der Effizienz als Diagramm zeichnen.
+
+Die Funktion für den Erwatungswert lässt sich beschreiben als:
+$\frac{Personenzahl}{(1 - (1-Prävalenz)^{Personenzahl} \cdot (Personenzahl + 1)) + ((1-Prävalenz)^{Personenzahl}) \cdot 1)}$
+
+In diese Funktion \textit{Erwartungswert(Prävalenz, Poolgröße)} setzen wir nun die Poolgröße 3 aus den beispielen des vorherigen Kapitels ein.
+
+Daraus ergibt sich: \textit{Erwartungswert(Prävalenz, 3)} = 
+\begin{wrapfigure}{r}{0.4\textwidth}
+	%\centering
+	\includegraphics[width=.5\textwidth]{img/ErwartungEindim3}
+	\caption{Effizienz eines Pools mit drei Personen nach Prävalenz}
+\end{wrapfigure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/EffizienzTestgruppePfeile}
+	\caption{Effizienz eines Pools mit drei Personen nach Prävalenz}
+\end{figure}
+
+Unterschiedliche Testgrößen bilden hierbei unterschiedliche Kurvenverläufe.
+Allerdings muss nicht für den gesamten Prävalenzspektrum derselbe Test zum einsatz kommen.
+
+Für das bisherige Beispiel mit einem Pool von 3 Personen lässt sich somit sagen:
+
+
+Für jede Prävalenz kann somit errechnet werden, welche Testgröße den optimalen Erwartungswert ergibt.
+
+Einen Effizienzwechsel findet man immer an den Schnittpunkten der Effizienzkurven.
+
 Auf der Evaluierung der Poolingmethoden wurden mathematisch sinnvolle Verfahren für die jeweiligen Inzidenzstufen ermittelt.
 Diese sollen nun um weitere Parameter erweitert werden, um ihre Tauglichkeit im betrieblichen Umfeld zu ermitteln.
 
@@ -12,6 +50,19 @@ Umfangreiche Methoden werden nur weiter verfolgt, wenn sie das einfache Referenz
 Das einfachste Verfahren für Pooling ist, eine eindimensionale Reihe von Proben zu verwenden und diese vor der PCR-Analyse zu kombinieren.
 Die Matrix lässt sich hierbei als 1xN beschreiben.
 Die Proben werden gemeinsam getestet.
+
+Die Nachtestung kann durch mehrstufiges Pooling optimiert werden.
+Für das einfachste Basisverfahren wird allerdings angenommen, dass nach einem Positivergebnis das Pooling beendet wird.
+Die Personen innerhalb des positiven Pools werden einzeln nachgetestet.\footnote{Viehweger Zeile 11}
+
+Hieraus ergibt sich:
+%Erwartungswert Testbedarf = (P(Positiv) * N+1) + (!P(Positiv) * 1)
+%N/((MIN(1;N*Prävalenz)*(N+1))+(1-MIN(1;N*Prävalenz)))
+
+P(PoolPositiv) = $(min\left(1;Poolsize\cdot Pravalenz\right)$
+
+Erwartungswert Personen pro Test =
+$\frac{Poolsize}{P(PoolPositiv)\cdot (Poolsize + 1)) + (1 - P(PoolPositiv))}$
 
 \subsubsection{Effizienzkurve Eindimensionale Pools}
 Für das eindimensionale Poolingverfahren ergibt sich insgesamt die folgende Effizienzkurve.
@@ -91,7 +142,6 @@ Grundsätzlich verhält sich der Bedarf an Nachtestungen quadratisch zur Anzahl 
 Es ist allerdings möglich, dass mehrere positive Personen in einem Test sind.
 Durch diese Überschneidung verringert sich der Bedarf für Nachtestungen, weswegen eine Clusterung positiver Tests vorteilhaft sein kann.
 
-\cleardoublepage
 \section{Viehweger}
 Bei Poolgröße 20 und 2 Prozent Prävalenz Erreicht diese Methode eine Effizienzsteigerung um den Faktor 5.\footnote{Viehweger Z14}
 

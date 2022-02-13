@@ -1,157 +1,108 @@
 % !TEX root =  master.tex
-\chapter{Analyse und Bewertung von Poolingmethoden}
-Im vorherigen Kapitel wurde aufgezeigt, dass die Effizienz einer Poolingmethode von zwei Parametern abhängt:
+\chapter{Optimierung und Potenziale}
+\section{Optimierung der Poolgröße}
+Im vorherigen Kapitel wurde aufgezeigt, dass die Effizienz einer Poolingmethode von zwei Parametern abhängt.
+In Kombination ergeben diese beiden Werte die Wahrscheinlichkeit, mit welcher infizierte Personen innerhalb der Testgruppe sind.
 \begin{itemize}
-	\item Der Prävalenz, woraus sich die Wahrscheinlichkeit für infizierte Personen ergibt
-	\item Der Testgröße, welche frei gewählt werden kann.
+	\item \textbf{Prävalenz} Hieraus ergibt sich die Wahrscheinlichkeit, mit der Personen infiziert sind.
+	Bei einem realen Testverfahren ist die Prävalenz ein externer Faktor.
+	Sie ist Abhängig von der aktuellen Inzidenz und dem Umfeld der Testung.
+	\item \textbf{Größe der Testgruppe} Diese kann vom Labor frei gewählt werden.
 \end{itemize}
-In Kombination ergeben diese beiden Werte die Wahrscheinlichkeit, mit welcher Infizierte Personen innerhalb der Testgruppe sind.
 
-Für jeden gegebene Kombination aus Testgröße und Prävalenz lässt sich somit der Erwartungswert als abhängige Variable darstellen.
-Wenn man eine der Variablen als Rahmenbedingung festsetzt, lässt sich der andere Wert gemeinsam mit der Effizienz als Diagramm zeichnen.
-
-Die Funktion für den Erwatungswert lässt sich beschreiben als:
+Dieser Zusammenhang ergibt die Funktion für den Erwartungswert:\newline
 $\frac{Personenzahl}{(1 - (1-Prävalenz)^{Personenzahl} \cdot (Personenzahl + 1)) + ((1-Prävalenz)^{Personenzahl}) \cdot 1)}$
 
-In diese Funktion \textit{Erwartungswert(Prävalenz, Poolgröße)} setzen wir nun die Poolgröße 3 aus den beispielen des vorherigen Kapitels ein.
+Für jede gegebene Prävalenz, lassen sich durch Auswahl der Personenanzahl unterschiedliche Verläufe der Effizienzkurve erreichen.
+Die Anzahl der Personen pro Pool sollte deshalb anhand der Prävalenz gewählt werden, um den Erwartungswert zu maximieren.
 
-Daraus ergibt sich: \textit{Erwartungswert(Prävalenz, 3)} = 
-\begin{wrapfigure}{r}{0.4\textwidth}
+Der Erwartungswert(Personenzahl, Prävalenz) lässt sich auch als Graph darstellen.
+\begin{wrapfigure}{r}{0.48\textwidth}
 	%\centering
-	\includegraphics[width=.5\textwidth]{img/ErwartungEindim3}
-	\caption{Effizienz eines Pools mit drei Personen nach Prävalenz}
+	\includegraphics[width=.48\textwidth]{img/PraevalenzZuTestgruppe}
+	\caption{Effizienz unterschiedlicher \newline Poolgrößen nach Prävalenz}
 \end{wrapfigure}
+Wenn man eine der Variablen als Rahmenbedingung festsetzt, lässt sich der andere Wert gemeinsam mit der Effizienz als Diagramm zeichnen.
+in Abbildung X.X wird die Personenanzahl auf 4, 8 und 16 festgesetzt und der Erwartungswert in Abhängigkeit der Prävalenz dargestellt.
+Zu erkennen ist, dass höhere Personenzahlen bei niedrigen Prävalenzen die Effizienz enorm steigern können.
+Wenn die Prävalenz allerdings steigt, werden die großen Pools schnell anfällig für Nachtestungen und verlieren so überproportional an Effizienz.
 
+\cleardoublepage
+
+Alternativ zur Darstellung nach Poolgröße kann auch die Prävalenz als gegeben festgesetzt werden.
+In Abbildung X.X wird hierfür jedes Prävalenzniveau als eigener Graph dargestellt.
+
+Diese Darstellung ist in der Praxis sehr einfach anzuwenden.
+Das Optimum für die aktuelle Prävalenz liegt immer am Hochpunkt.
+Die Poolgröße kann einfach auf der X-Achse und die hieraus resultierende Effizienz auf der Y-Achse abgelesen werden.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{img/EffizienzTestgruppePfeile}
 	\caption{Effizienz eines Pools mit drei Personen nach Prävalenz}
 \end{figure}
 
-Unterschiedliche Testgrößen bilden hierbei unterschiedliche Kurvenverläufe.
-Allerdings muss nicht für den gesamten Prävalenzspektrum derselbe Test zum einsatz kommen.
-
-Für das bisherige Beispiel mit einem Pool von 3 Personen lässt sich somit sagen:
-
-
-Für jede Prävalenz kann somit errechnet werden, welche Testgröße den optimalen Erwartungswert ergibt.
-
-Einen Effizienzwechsel findet man immer an den Schnittpunkten der Effizienzkurven.
-
-Auf der Evaluierung der Poolingmethoden wurden mathematisch sinnvolle Verfahren für die jeweiligen Inzidenzstufen ermittelt.
-Diese sollen nun um weitere Parameter erweitert werden, um ihre Tauglichkeit im betrieblichen Umfeld zu ermitteln.
-
-\section{Eindimensionales Pooling}
-Begonnen wird mit einem einfachen, eindimensionalen Poolingverfahren als spätere Referenz.
-Kompliziertere Verfahren werden später erläutert um zu prüfen, ob hierdurch ein Mehrwert beobachtet werden kann.
-Hierdurch wird sichergestellt, dass das einfachstmögliche Verfahren angewandt wird.
-Umfangreiche Methoden werden nur weiter verfolgt, wenn sie das einfache Referenzverfahren übertreffen.
-
-Das einfachste Verfahren für Pooling ist, eine eindimensionale Reihe von Proben zu verwenden und diese vor der PCR-Analyse zu kombinieren.
-Die Matrix lässt sich hierbei als 1xN beschreiben.
-Die Proben werden gemeinsam getestet.
-
-Die Nachtestung kann durch mehrstufiges Pooling optimiert werden.
-Für das einfachste Basisverfahren wird allerdings angenommen, dass nach einem Positivergebnis das Pooling beendet wird.
-Die Personen innerhalb des positiven Pools werden einzeln nachgetestet.\footnote{Viehweger Zeile 11}
-
-Hieraus ergibt sich:
-%Erwartungswert Testbedarf = (P(Positiv) * N+1) + (!P(Positiv) * 1)
-%N/((MIN(1;N*Prävalenz)*(N+1))+(1-MIN(1;N*Prävalenz)))
-
-P(PoolPositiv) = $(min\left(1;Poolsize\cdot Pravalenz\right)$
-
-Erwartungswert Personen pro Test =
-$\frac{Poolsize}{P(PoolPositiv)\cdot (Poolsize + 1)) + (1 - P(PoolPositiv))}$
-
-\subsubsection{Effizienzkurve Eindimensionale Pools}
-Für das eindimensionale Poolingverfahren ergibt sich insgesamt die folgende Effizienzkurve.
-
-Eine vollständige gegenüberstellung in tabellarischer Form ist im Anhang dargestellt.
-\begin{figure}[h]
-	\centering
-	\includegraphics[height=.6\textwidth]{img/1D_Pool-EffKurve}
-	\caption{Effizienzkurve des eindimensionalen Poolingverfahrens\footnotemark}
-\end{figure}
-
-Als logarithmische Tabelle bedeutet dies:
-
-\begin{tabular}{|c|c|}
-	\hline
-	Prävalenz (von 100.000) & Erwartungswert \\
-	\hline
-	1 & sdf \\
-	\hline
-	10 & sdf \\
-	\hline
-	100 & asdad \\
-	\hline
-	1.000 & sdfsd \\
-	\hline
-	10.000 & dfg \\
-	\hline
-	100.000 & dfg \\
-	\hline
-\end{tabular}
+\begin{wraptable}{r}{7.7cm}
+	\begin{tabular}{|r|r|c|r|}
+		\hline
+		Inzidenz&Prävalenz&Personen&Effizienz\\
+		\hline
+		35 & 0,00035 & 54 & 26,9x\\
+		\hline
+		50 & 0,00050 & 45 & 22,5x \\
+		\hline
+		100 & 0,00100 & 32 & 15,9x \\
+		\hline
+		250 & 0,00250 & 21 & 10,1x \\
+		\hline
+		2.000 & 0,02 & 8 & 3,6x\\
+		\hline
+		10.000 & 0,10  & 4 & 1,7x\\
+		\hline
+		25.000 & 0,25 & 3 & 1,1x\\
+		\hline
+		%\caption{A wrapped table going nicely inside the text.}
+	\end{tabular}
+\end{wraptable} 
+Wenn die Inzidenz bisher bei 100 lag, war es effizient ein Pooling von 32 Personen durchzuführen.
+Gemäß Punkt A konnte hiermit die Effizienz um den Faktor 15,93x gesteigert werden.
+Die Inzidenz hat sich seitdem auf 250 erhöht.
+Mit der unveränderten Poolgröße von 32 ist das Labor somit auf Punkt B gesunken und kann nun nur noch einen Multiplikator von 9,24 erwarten.
+Für das neue Inzidenzniveau bei 250 kann das Pooling optimiert werden, indem die Poolgröße auf 20 gesenkt wird.
+Dies bewirkt eine Linksverschiebung entlang der 250-Linie zu Punkt C, an welchem eine Effizienz von 10,12x erwartet werden kann.\footnote{Eine vollständige Gegenüberstellung in tabellarischer Form ist im Anhang dargestellt.}
 
 \cleardoublepage
 
-\section{Zweidimensionales Pooling}
-Bei dieser Poolingmethode handelt es sich um einen zweidimensionalen Pool, mit dem Ziel, den Bedarf einer Nachtestung bei einzelnen Positivfällen zu minimieren.
+\section{Ausblick: Komplexe Poolingverfahren}
+Dieser Abschnitt widmet sich einem Ausblick auf komplexere Poolingverfahren, welche im Umfang dieser Arbeit nicht näher beleuchtet werden können.
+Durch die zunehmende Komplexität ergeben sich Potenziale für weitere Effizienzsteigerungen.
+Diese sind allerdings auch mit neuen Risiken verbunden.
+
+\textbf{Mehrdimensionale Pools}\ haben das Ziel, durch Überlappung der Pools den Bedarf einer Nachtestung bei einzelnen Positivfällen zu minimieren.
 Die Testpersonen werden in einer AxB-Matrix angeordnet.
 Die Proben werden dann für jede Spalte und jede Reihe gepoolt.
 Allgemein formuliert lässt sich sagen:
 Testbedarf pro Person =
 $\frac{A+B}{A\cdot B}$
 
-Die Testgruppe lässt sich geometrisch als Rechteck beschreiben.
-Die Kanten A und B ergeben in Summe die benötigte Testanzahl.
-Die Fläche beschreibt die mögliche Anzahl der zu testenden Personen.
-Aus der Geometrie ist bekannt,\footnote{Geometrie Quadrat}
-dass das Verhältnis von Fläche zu Kantenlänge bei einem Quadrat optimal ist.
-Bei dieser Methode kommen somit nur Quardate als effizient infrage.
-Hierdurch lässt sich festlegen, dass $A=B$.
-
+\begin{wrapfigure}{r}{0.48\textwidth}
+	%\centering
+	\includegraphics[width=.48\textwidth]{img/2d_Pool_1Positiv}
+	\caption{Zweidimensionaler Pool mit einer positiven Probe}
+\end{wrapfigure}
 Für eine Testgruppe von 25 Personen, welche in einer 5x5 Matrix angeordnet sind, werden somit 5+5 Tests benötigt.
-Die Effizienz läge bei 2,5 Personen pro Test.
+Die Effizienz läge bei 2,5x wenn alle Personen negativ getestet werden.
 Vergleichen mit dem eindimensionalen Poolingverfahren klingt das zunächst nicht nach sehr viel.
-Allerdings ist dieses Verfahren darauf optimiert, robust gegen einzelne Positivfälle zu sein.
-Die Hypothese wäre somit, dass es bei hohen Prävalenzen einen Vorteil bietet, da nicht alle Testpersonen erneut getestet werden müssen.
+Allerdings ist dieses Verfahren robust gegen einzelne Positivfälle.
+Dies kann bei hohen Prävalenzen einen Vorteil bietet, da nicht alle Testpersonen erneut getestet werden müssen.
+Zwei Positivfälle lassen sich beispielsweise mit nur vier Nachtestungen auflösen.
+Hieraus ergibt sich, dass 25 Personen mit 10+4 Tests aufgelöst wurden.
+Das Verfahren behält also selbst bei zwei positiven Proben eine Effizienz von 1,79 und verspricht damit deutlich robuster gegen hohe Prävalenzen zu sein.
 
-Die Wahrscheinlichkeit, dass der Pool positiv ist verändert sich zum anderen Testverfahren nicht.
-Sie hängt wieder von Prävalenz und Größe der Testgruppe ab.
-Deshalb gilt weiterhin:
-P(PoolPositiv) = $(min\left(1;Poolsize\cdot Pravalenz\right)$
+Viehweger beschreibt ein Verfahren, um bei einer Prävalenz von 2 Prozent noch eine Effizienzsteigerung um den Faktor 5x zu erreichen.\footnote{Viehweger Z14}
+Das in dieser Arbeit beschriebene Verfahren kommt hier nur auf einen Erwartungswert von 3,6x.
+Für die Überprüfung von Verdachtsfällen mit hohen Prävalenzen, sollte deshalb diese Verfahren geprüft werden.
 
-Bei der Nachtestung im Falle eines positiven Pools werden allerdings nicht mehr alle Personen nachgetestet.
-Sollte nur eine Person in der Testgruppe positiv sein, so kann dessen Position in der Testgruppe anhand der positiven Pools abgelesen werden.
-\begin{figure}[h]
-	\centering
-	\includegraphics[height=.25\textwidth]{img/2d_Pool_1Positiv}
-	\caption{Zweidimensionaler Pool mit einer positiven Person (Probe32). Die Pools A2 und B3 werden positiv und weisen auf die Position 3-2 der positiven Probe. Für die Hellrot unterlegten Personen liegt ein positiver und ein Negativer Pool vor.\footnotemark}
-\end{figure}
-
-Erwartungswert Personen pro Test =
-%$\frac{A\cdot A} {P(PoolPositiv)\cdot (Poolsize + 1)) + (1 - P(PoolPositiv))}$
-
-Die beiden positiven Personen (1-4 und 3-2) in Abb 3.3 lösen die Tests A2, A4, B1 und B3 aus.
-Neben den positiven Personen zeigen diese Tests auch auf die eigentlich negativen Proben 1-2 und 3-4.
-Aus diesem Grund müssen hier für zwei positive Personen vier Proben nachgetestet werden.
-
-Grundsätzlich verhält sich der Bedarf an Nachtestungen quadratisch zur Anzahl der Positiven Personen.
-Es ist allerdings möglich, dass mehrere positive Personen in einem Test sind.
-Durch diese Überschneidung verringert sich der Bedarf für Nachtestungen, weswegen eine Clusterung positiver Tests vorteilhaft sein kann.
-
-\section{Viehweger}
-Bei Poolgröße 20 und 2 Prozent Prävalenz Erreicht diese Methode eine Effizienzsteigerung um den Faktor 5.\footnote{Viehweger Z14}
-
-
-%\section{Blutspendedienste}
-In Deutschland haben die größte Erfahrung die Blutspendedieste zu haben, da diese seit Jahrzehnten Pooling-Verfahren einsetzen um auf HIV und Hepatitis zu testen (Ärtzeblatt). Diese haben hierfür auch ein Patent angemeldet. Die Methode dieses Patents soll die Basis für den Vergleich anderer Verfahren sein.
-
-%\section{Forschungsgruppe 3}
-
-%\cleardoublepage
+\cleardoublepage
 
 
 %#########################################################

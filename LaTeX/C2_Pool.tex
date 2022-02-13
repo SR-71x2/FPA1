@@ -2,39 +2,42 @@
 \cleardoublepage
 \chapter{PCR-Pooling}
 \section{Parameter und Kenngrößen für das Verfahren}
-%Prävalenz
-\begin{wrapfigure}{r}{0.44\textwidth}
-	%\centering
-	\includegraphics[width=.44\textwidth]{img/RKI_PCR_Positivrate}
-	\caption{Prävalenz von PCR-Tests}
-\end{wrapfigure}
-Die \textbf{Prävalenz} ist die Quote, mit welcher eine Krankheit in einer Stichprobe vorkommt.\footnote{Leon Gordis S37}
-Sie ist ähnlich der derzeit allgemein bekannteren Inzidenz, welche sich auf die Gesamtbevölkerung bezieht.
-Bei einer anlasslosen, repräsentativen Testung der Bevölkerung kann die Prävalenz eines Tests gleich der Inzidenz sein.
-Bei einer anlassbezogenen Testung werden allerdings meist deutlich höhere Prävalenzen beobachtet.
-Gemäß aktuellem RKI-Wochenbereicht sind zwischenzeitlich über 40 Prozent der PCR-Tests positiv.
-\footnote{RKI Wochenbericht}
 
-%Mögliche Poolgrößen
-Das PCR-Verfahren erlaubt grundsätzlich ein \textbf{Pooling} von mehreren Testpersonen.
-Die Proben der Patienten werden hierbei zu einem Pool zusammengefasst und gemeinsam getestet.
+%\begin{wrapfigure}{r}{0.44\textwidth}
+	%\centering
+	%\includegraphics[width=.44\textwidth]{img/RKI_PCR_Positivrate}
+	%\caption{Prävalenz von PCR-Tests}\footnote{Eigene Darstellung gemäß RKI}
+%\end{wrapfigure}
+Die \textbf{Prävalenz} ist die Quote, mit welcher eine Krankheit in einer Bevölkerungsgruppe auftritt.\footnote{Leon Gordis S37}
+Sie ist ähnlich dem Konzept der Inzidenz, welche sich auf die Gesamtbevölkerung bezieht.
+Bei einer anlassbezogenen Testung werden meist deutlich höhere Prävalenzen beobachtet.
+Gemäß RKI-Wochenbereicht sind zwischenzeitlich über 40 Prozent der PCR-Tests positiv.\footnote{RKI Wochenbericht}
+
 Das PCR-Verfahren ist darauf ausgelegt, geringe DNA-Mengen zu einer nachweisbaren Menge zu vermehren.
-Die Verwässerung der Probe ist bis zu einem gewissen Punkt deshalb unproblematisch für den Nachweis.
-Auch eine (zu) hohe Verdünnung ist zulasten der Erkennungsrate problemlos möglich.
-Abgewogen werden muss hierbei die Priorisierung zwischen Präzision und Kostenersparnis.
-Eine Poolgröße von bis zu 20 Personen liegt laut Viehweger "comfortable above the detection rate"\footnote{Vieweger v1}
+Die Verwässerung der Probe ist deshalb bis zu einem gewissen Punkt unproblematisch für den Nachweis.
+Hierdurch wird ein \textbf{Pooling} von mehreren Testpersonen möglich.
+Die Proben der Patienten werden zunächst zu einem Pool zusammengefasst und anschließend gemeinsam getestet.
+Das Verfahren funktioniert grundsätzlich auch bei hoher Verdünnung.
+Die Erkennungsrate sinkt hierbei allerdings.
+Abgewogen werden muss deshalb zwischen Präzision und Kostenersparnis.
+Eine Poolgröße von bis zu 20 Personen ist laut Viehweger "comfortable above the detection rate"\footnote{Vieweger v1}
 Andere Gruppe halten Poolgrößen von bis zu 90 Personen für akzeptabel.\footnote{Quelle 2 Pooling Verwässerung}
 Es ist zu beachten, dass bei größeren Pools mehr Verdopplungsschritte notwendig sind, um dieselbe Virenmenge in der Probe zu erhalten.
 Beim Pooling von 16 Personen liegt beispielsweise eine um $2^{4}$ niedrigere Virenlast vor.
-Deshalb müssen 4 weitere Zyklen eingeplant werden.
-\footnote{Vieweger v1}
+Deshalb müssen 4 weitere Zyklen eingeplant werden.\footnote{Vieweger v1}
+
+\cleardoublepage
 
 \section{Umgang mit dem Ergebnis}
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{wrapfigure}{r}{.4\textwidth}
 	%\centering
 	\includegraphics[width=.4\textwidth]{img/PoolAlleNegativ}
-	\caption{Pooling benötigt für drei negative Personen nur ein Test}
+	\caption{Pooling benötigt für drei negative Personen nur ein Test\footnotemark}
+	\includegraphics[width=.4\textwidth]{img/PoolPositiv}
+	\caption{Ein positiven Pool kann die positive Person nicht identifizieren\footnotemark}
 \end{wrapfigure}
+\footnotetext{Eigene Darstellung}
+\footnotetext{Eigene Darstellung}
 \textbf{Ergebnisinterpretation}
 \begin{itemize}
 	\item \textbf{Negatives Poolergebnis:}\newline
@@ -44,14 +47,8 @@ Deshalb müssen 4 weitere Zyklen eingeplant werden.
 	\item \textbf{Positives Poolergebnis:}\newline
 	Ein positives Gesamtergebnis bedeutet, dass \textbf{mindestens eine Einzelprobe positiv} war.
 	In diesem Fall müssen weitere Tests durchgeführt werden, um die positiven Einzelpersonen zu ermitteln.
-
 \end{itemize}
 
-\begin{wrapfigure}{r}{0.4\textwidth}
-	%\centering
-	\includegraphics[width=.4\textwidth]{img/PoolPositiv}
-	\caption{Ein positiven Pool kann die positive Person nicht idendifizieren}
-\end{wrapfigure}
 \textbf{Unklare Ergebnisse}\newline
 Durch Pooling besteht das Risiko, dass die Ergebnisse nicht für alle Testpersonen eindeutig interpretiert werden können.
 Wie häufig dies der Fall ist und welcher Anteil der Testgruppe nachuntersucht werden muss, ist abhängig vom gewählten Verfahren.
@@ -65,11 +62,6 @@ Durch die erneute Testung verlängert sich der Zeitraum, bevor für alle Testper
 Dies kann abhängig von der Situation in welcher der Test benötigt wird nicht akzeptabel sein.
 
 \cleardoublepage
-\begin{wrapfigure}{r}{0.4\textwidth}
-	%\centering
-	\includegraphics[width=.4\textwidth]{img/Pipettenmatrix}
-	\caption{Pipettenautomat}
-\end{wrapfigure}
 Beim ersten Poolingdurchlauf muss darauf geachtet werden, die Proben untereinander nicht zu kontaminieren.
 Eine Verunreinigung der Originalproben würde eine spätere Nachtestung unmöglich machen.
 
@@ -77,14 +69,16 @@ Um eine \textbf{Kontamination} durch das Pooling zu verhindern, sollte die kompl
 Die für den aktuellen Test notwendigen Proben werden hierbei entnommen und im Duplikat gepoolt.
 Für diesen Duplikationsschritt gibt es spezialisierte Laborgeräte, sodass dies in einem Arbeitsschritt für alle Proben durchgeführt werden kann - teilweise sogar automatisiert.\footnote{https://www.genengnews.com/wp-content/uploads/2019/07/Eppendorf.jpg}
 
-\begin{wrapfigure}{l}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.4\textwidth}
 	%\centering
 	\includegraphics[width=.4\textwidth]{img/KomplexePools}
-	\caption{Überlappende Pools}
-	
+	\caption{Überlappende Pools\footnotemark}
+
 	\includegraphics[width=.4\textwidth]{img/MehrerePositiv}
-	\caption{Mehrere Positivfälle}
+	\caption{Mehrere Positivfälle\footnotemark}
 \end{wrapfigure}
+\footnotetext{Eigene Darstellung}
+\footnotetext{Eigene Darstellung}
 
 \textbf{Überlappende Pools}\newline
 Um das Problem der Nachtestungen zu lösen, kann man mehrere überlappende Tests durchführen.
@@ -103,8 +97,9 @@ Die Kosten der Testung haben sich zudem für alle Testgruppen erhöht, da durch 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.8\textwidth]{img/GrossePooluebersicht}
-	\caption{Überlappende Pools}
+	\caption{Überlappende Pools\footnotemark}
 \end{figure}
+\footnotetext{Eigene Darstellung}
 
 Weitere Schwierigkeiten ergeben sich, wenn für Personen gemischte Ergebnisse vorliegen.
 Bei den drei Personen der rechten Testgruppe sind als beide Pooltests positiv ausgefallen.
@@ -134,34 +129,32 @@ Die Übermittlung des Testergebnisses wird hierdurch stark verzögert, was ebenf
 \begin{wrapfigure}{r}{0.4\textwidth}
 	%\centering
 	\includegraphics[width=.4\textwidth]{img/EffizienzNegativ}
-	\caption{Effizienz eines \newline negativen Pools}
+	\caption{\mbox{Effizienz eines} \mbox{negativen} Pools\footnotemark}
 	
 	\includegraphics[width=.4\textwidth]{img/EffizienzPositiv}
-	\caption{Effizienz eines \newline positiven Pools}
+	\caption{\mbox{Effizienz eines} \mbox{positiven Pools}\footnotemark}
 \end{wrapfigure}
+\footnotetext{Eigene Darstellung}
+\footnotetext{Eigene Darstellung}
 
 Als \textbf{Effizienz} einer Poolingmethode wird nachfolgend der Multiplikator bezeichnet, welcher gegenüber Einzeltestungen erzielt werden kann.
-Diese ist Abhängig von der Größe der Testgruppe und der Anzahl der Tests die erforderlich sind um den Infektionsstatus jeder Person zu klassifizieren.
+Diese ist Abhängig von der Größe der Testgruppe und der Anzahl der Tests die erforderlich sind, um den Infektionsstatus jeder Person zu klassifizieren.
 Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen}{Anzahl Tests} $.
 
 Im bestmöglichen Fall ist die gesamte Testgruppe nicht infiziert.
 Hierdurch fallen im ersten Durchlauf alle Tests negativ aus und die gesamte Testgruppe kann als negativ markiert werden.
-Im Beispiel der Abbildung X.X ergibt sich eine Effizienz von 3.
+Im Beispiel der Abbildung X.X ergibt sich eine Effizienz von 3,0.
 
-Im Falle einer Nachtestung wird ein initialer Test für den Pool benötigt, welcher positiv ausfällt.
-Danach werden nochmal Tests für jede Einzelperson benötigt.
+Bei einem positiven Pool wird zunächst ein Pooltest benötigt und danach ein Einzeltest für jede Person.
 Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen (N)}{1 Pooltest + N Einzeltests} $.
-Für den Positivfall liegt die Effizienz also bei 0,75.
-Das Ergebnis ist damit schlechter als wenn direkt einzeln getestet worden wäre, da zuerst ein zusätzlicher Pooltest verwendet wurde.
+Für Abbildung X.X liegt die Effizienz damit bei 0,75 und ist schlechter, als wenn direkt einzeln getestet worden wäre.
 
-Für den Vergleich von Teststrategien ist der \textbf{Erwartungswert für die Effizienz} relevant.
+Der \textbf{Erwartungswert für die Effizienz} kann als Kennzahl für die Bewertung von Teststrategien eingesetzt werden.
 Die benötigte Anzahl der Tests ist abhängig vom Ergebnis der Pooltests.
-Wenn alle Ergebnisse negativ sind, ist die Effizienz 3. Wenn das Poolergebnis positiv ist, liegt die Effizienz bei nur 0,75.
+\begin{itemize}
+	\item \textbf{Alle Ergebnisse negativ:} Keine Nachtestungen. Effizienz 3,0. 
+	\item \textbf{Poolergebnis positiv:} Einzelne Nachtestungen. Effizienz 0,75.
+\end{itemize}
 Der Erwartungswert ergibt sich aus diesen beiden Szenarien, gewichtet nach ihrer Eintrittswahrscheinlichkeit.
 Die Wahrscheinlichkeit, dass jemand innerhalb der Testgruppe Infiziert ist, hängt von der Prävalenz und der Größe der Testgruppe ab.
-
-Bei einer Prävalenz von 10 Prozent und drei statistisch unabhängigen Testpersonen, liegt die Wahrscheinlichkeit für einen Positivfall bei 30 Prozent. \textbf{Statistik prüfen}
-Die Effizienz liegt also mit einer Wahrscheinlichkeit von 30 Prozent bei 0,75 und mit einer Wahrscheinlichkeit von 70 Prozent bei 3,0.
-Daraus ergibt sich unter diesen Parametern eine gewichtete Effizienz für das Verfahren von 2,325.
-
 \cleardoublepage

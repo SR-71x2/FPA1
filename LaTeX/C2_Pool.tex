@@ -1,7 +1,7 @@
 % !TEX root =  master.tex
 \cleardoublepage
 \chapter{PCR-Pooling}
-\section{Parameter und Kenngrößen für das Verfahren}
+\section{Parameter und Kenngrößen}
 
 Die \textbf{Prävalenz} ist die Quote, mit welcher eine Krankheit in einer Bevölkerungsgruppe auftritt.\footnote{Leon Gordis S37}
 Sie ist ähnlich dem Konzept der Inzidenz, welche sich auf die Gesamtbevölkerung bezieht.
@@ -12,9 +12,13 @@ Das PCR-Verfahren ist darauf ausgelegt, geringe DNA-Mengen zu einer nachweisbare
 Die Verwässerung der Probe ist deshalb bis zu einem gewissen Punkt unproblematisch für den Nachweis.
 Hierdurch wird ein \textbf{Pooling} von mehreren Testpersonen möglich.
 Die Proben der Patienten werden zunächst zu einem Pool zusammengefasst und anschließend gemeinsam getestet.
+
 Das Verfahren funktioniert grundsätzlich auch bei hoher Verdünnung.
 Die Erkennungsrate sinkt hierbei allerdings.
+Eine Grenze bis zu welchem Punkt das Verfahren funktioniert, gibt es nicht.
+Das Verfahren verliert mit zunehmender \textbf{Verwässerung} stufenlos an Genauigkeit.
 Abgewogen werden muss deshalb zwischen Präzision und Kostenersparnis.
+
 Eine Poolgröße von bis zu 20 Personen ist laut Viehweger "comfortable above the detection rate"\footnote{Vieweger v1}
 Andere Gruppe halten Poolgrößen von bis zu 90 Personen für akzeptabel.\footnote{Quelle 2 Pooling Verwässerung}
 Es ist zu beachten, dass bei größeren Pools mehr Verdopplungsschritte notwendig sind, um dieselbe Virenmenge in der Probe zu erhalten.
@@ -24,39 +28,44 @@ Deshalb müssen 4 weitere Zyklen eingeplant werden.\footnote{Vieweger v1}
 \cleardoublepage
 
 \section{Umgang mit dem Ergebnis}
-\begin{wrapfigure}{r}{.4\textwidth}
-	%\centering
-	\includegraphics[width=.4\textwidth]{img/PoolAlleNegativ}
-	\caption{Pooling benötigt für drei negative Personen nur ein Test\footnotemark}
-	\includegraphics[width=.4\textwidth]{img/PoolPositiv}
-	\caption{Ein positiven Pool kann die positive Person nicht identifizieren\footnotemark}
-\end{wrapfigure}
-\footnotetext{Eigene Darstellung}
-\footnotetext{Eigene Darstellung}
-\textbf{Ergebnisinterpretation}
 \begin{itemize}
-	\item \textbf{Negatives Poolergebnis:}\newline
-	Ein negatives Gesamtergebnis bedeutet, dass \textbf{jede Einzelprobe negativ} war.
+	\item Ein \textbf{Negatives Poolergebnis}
+	bedeutet, dass \textbf{jede Einzelprobe negativ} war.
 	Es wurde somit durch einen Test festgestellt, dass alle Personen im Pool negativ sind.
-		
-	\item \textbf{Positives Poolergebnis:}\newline
-	Ein positives Gesamtergebnis bedeutet, dass \textbf{mindestens eine Einzelprobe positiv} war.
+	
+	\item Ein \textbf{Positives Poolergebnis} bedeutet, dass \textbf{mindestens eine Einzelprobe positiv} war.
 	In diesem Fall müssen weitere Tests durchgeführt werden, um die positiven Einzelpersonen zu ermitteln.
 \end{itemize}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{img/PoolAlleNegativ}
+	\caption{Pooling benötigt für drei negative Personen nur ein Test\footnotemark}
+\end{figure}
+
+\footnotetext{Eigene Darstellung}
+
+
+
 \textbf{Unklare Ergebnisse}\newline
 Durch Pooling besteht das Risiko, dass die Ergebnisse nicht für alle Testpersonen eindeutig interpretiert werden können.
-Wie häufig dies der Fall ist und welcher Anteil der Testgruppe nachuntersucht werden muss, ist abhängig vom gewählten Verfahren.
+Wie häufig dies der Fall ist und welcher Anteil der Testgruppe nachuntersucht werden muss, ist abhängig von den gewählten Parametern.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{img/PoolPositiv}
+	\caption{Ein positiven Pool kann die positive Person nicht identifizieren\footnotemark}
+\end{figure}
+\footnotetext{Eigene Darstellung}
 
 Hierdurch werden \textbf{Nachtestungen} der betroffenen Personen notwendig.
 Die Tests erfolgen hierbei nacheinander und sind statistisch unabhängig voneinander.
-Manche Verfahren erfordern sogar mehrere sequenzielle Nachtestungen.
+Manche Methoden erfordern sogar mehrere sequenzielle Nachtestungen.
 
 Um Nachtestungen zu ermöglichen, müssen die Proben ausreichend Substanz für mehrere Testungen enthalten.
 Durch die erneute Testung verlängert sich der Zeitraum, bevor für alle Testpersonen das Ergebnis fest steht.
 Dies kann abhängig von der Situation in welcher der Test benötigt wird nicht akzeptabel sein.
 
-\cleardoublepage
 Beim ersten Poolingdurchlauf muss darauf geachtet werden, die Proben untereinander nicht zu kontaminieren.
 Eine Verunreinigung der Originalproben würde eine spätere Nachtestung unmöglich machen.
 
@@ -64,15 +73,11 @@ Um eine \textbf{Kontamination} durch das Pooling zu verhindern, sollte die kompl
 Die für den aktuellen Test notwendigen Proben werden hierbei entnommen und im Duplikat gepoolt.
 Für diesen Duplikationsschritt gibt es spezialisierte Laborgeräte, sodass dies in einem Arbeitsschritt für alle Proben durchgeführt werden kann - teilweise sogar automatisiert.\footnote{https://www.genengnews.com/wp-content/uploads/2019/07/Eppendorf.jpg}
 
-\begin{wrapfigure}{r}{0.4\textwidth}
-	%\centering
+\begin{figure}[h]
+	\centering
 	\includegraphics[width=.4\textwidth]{img/KomplexePools}
 	\caption{Überlappende Pools\footnotemark}
-
-	\includegraphics[width=.4\textwidth]{img/MehrerePositiv}
-	\caption{Mehrere Positivfälle\footnotemark}
-\end{wrapfigure}
-\footnotetext{Eigene Darstellung}
+\end{figure}
 \footnotetext{Eigene Darstellung}
 
 \textbf{Überlappende Pools}\newline
@@ -81,14 +86,20 @@ Aus der Kombination der Ergebnisse ist es theoretisch möglich, die infizierte P
 
 Schwierig wird es hierbei, wenn mehrere Personen innerhalb der Testgruppe positiv sind.
 Die positiven Tests lassen sich dann nicht mehr exakt einer Person zuordnen.
+\cleardoublepage
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{img/MehrerePositiv}
+	\caption{Mehrere Positivfälle\footnotemark}
+\end{figure}
+\footnotetext{Eigene Darstellung}
 Das Ergebnis in Abbildung X.X legt nahe, dass die mittlere Person infiziert ist.
 Beide Pools fallen positiv aus und nur die mittlere Person ist Teil beider Testgruppen.
 Für diese Person wäre es somit naheliegend ein falsch-positives Ergebnis mitzuteilen.
 
-Die Kosten der Testung haben sich zudem für alle Testgruppen erhöht, da durch diese Strategie für die erste Testrunde bereits zwei Tests notwendig sind, um eine Testgruppe von drei Personen abzubilden.
+Die Kosten der Testung erhöhen sich zudem für alle Testgruppen, da durch diese Strategie für die erste Testrunde bereits zwei Tests notwendig sind, um eine Testgruppe von drei Personen abzubilden.
 
-\cleardoublepage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.8\textwidth]{img/GrossePooluebersicht}
@@ -97,7 +108,7 @@ Die Kosten der Testung haben sich zudem für alle Testgruppen erhöht, da durch 
 \footnotetext{Eigene Darstellung}
 
 Weitere Schwierigkeiten ergeben sich, wenn für Personen gemischte Ergebnisse vorliegen.
-Bei den drei Personen der rechten Testgruppe sind als beide Pooltests positiv ausgefallen.
+In Abbildung X.X sind bei den drei Personen der rechten Testgruppe beide Pooltests positiv ausgefallen.
 In dieser Gruppe sind höchstwahrscheinlich eine oder mehrere Personen infiziert und die Gruppe muss nachgetestet werden.
 
 Bei den Personen der linken Gruppe liegt allerdings ein positives und ein negatives Ergebnis vor.
@@ -121,21 +132,15 @@ Hierduch werden bereits drei sequenzielle Durchläufe notwendig
 Die Übermittlung des Testergebnisses wird hierdurch stark verzögert, was ebenfalls Probleme verursachen kann.
 
 \section{Ermittlung des Erwartungswertes}
-\begin{wrapfigure}{r}{0.4\textwidth}
-	%\centering
-	\includegraphics[width=.4\textwidth]{img/EffizienzNegativ}
-	\caption{\mbox{Effizienz eines} \mbox{negativen} Pools\footnotemark}
-	
-	\includegraphics[width=.4\textwidth]{img/EffizienzPositiv}
-	\caption{\mbox{Effizienz eines} \mbox{positiven Pools}\footnotemark}
-\end{wrapfigure}
-\footnotetext{Eigene Darstellung}
-\footnotetext{Eigene Darstellung}
-
-Als \textbf{Effizienz} einer Poolingmethode wird nachfolgend der Multiplikator bezeichnet, welcher gegenüber Einzeltestungen erzielt werden kann.
+Als \textbf{Effizienz} einer Poolingmethode wird nachfolgend der Multiplikator bezeichnet, welcher gegenüber Einzeltestungen erzielt werden kann.\footnote{Quelle Wörtlich Viehweger Einleitung}
 Diese ist Abhängig von der Größe der Testgruppe und der Anzahl der Tests die erforderlich sind, um den Infektionsstatus jeder Person zu klassifizieren.
 Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen}{Anzahl Tests} $.
-
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{img/EffizienzNegativ}
+	\caption{\mbox{Effizienz eines} \mbox{negativen} Pools\footnotemark}
+\end{figure}
+\footnotetext{Eigene Darstellung}
 Im bestmöglichen Fall ist die gesamte Testgruppe nicht infiziert.
 Hierdurch fallen im ersten Durchlauf alle Tests negativ aus und die gesamte Testgruppe kann als negativ markiert werden.
 Im Beispiel der Abbildung X.X ergibt sich eine Effizienz von 3,0.
@@ -143,6 +148,13 @@ Im Beispiel der Abbildung X.X ergibt sich eine Effizienz von 3,0.
 Bei einem positiven Pool wird zunächst ein Pooltest benötigt und danach ein Einzeltest für jede Person.
 Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen (N)}{1 Pooltest + N Einzeltests} $.
 Für Abbildung X.X liegt die Effizienz damit bei 0,75 und ist schlechter, als wenn direkt einzeln getestet worden wäre.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{img/EffizienzPositiv}
+	\caption{\mbox{Effizienz eines} \mbox{positiven Pools}\footnotemark}
+\end{figure}
+\footnotetext{Eigene Darstellung}
 
 Der \textbf{Erwartungswert für die Effizienz} kann als Kennzahl für die Bewertung von Teststrategien eingesetzt werden.
 Die benötigte Anzahl der Tests ist abhängig vom Ergebnis der Pooltests.

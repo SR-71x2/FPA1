@@ -226,19 +226,6 @@ style=apa
 %\input{Quellenarbeit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ANHÄNGE
-%
-% @stud: einzelne Anhänge bearbeiten und eigene Anhänge hier einfügen 
-%        die nachfolgenden Zeilen deaktivieren, wenn keine Anhänge verwendet werden
-%
-%\initializeAppendix
-%\input{appendix1}
-%\input{appendix2}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\singlespacing
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LITERATURVERZEICHNIS
 % @stud: Literaturverzeichnis in Datei bibliography.bib anpassen. 
 %
@@ -252,10 +239,23 @@ style=apa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANHÄNGE
+%
+% @stud: einzelne Anhänge bearbeiten und eigene Anhänge hier einfügen 
+%        die nachfolgenden Zeilen deaktivieren, wenn keine Anhänge verwendet werden
+%
+\initializeAppendix
+\input{appendix1}
+%\input{appendix2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\singlespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % INDEX
 % @stud: ggf. Index auskommentieren, wenn nicht benötigt
 %
-\addcontentsline{toc}{chapter}{Index}
-\printindex
+%\addcontentsline{toc}{chapter}{Index}
+%\printindex
 
 \end{document}

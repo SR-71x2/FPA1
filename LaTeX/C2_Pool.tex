@@ -39,7 +39,7 @@ Deshalb müssen 4 weitere Zyklen eingeplant werden.\footcite{viehweger_increased
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\textwidth]{img/PoolAlleNegativ}
+	\includegraphics[width=.35\textwidth]{img/PoolAlleNegativ}
 	\caption{Pooling benötigt für drei negative Personen nur ein Test\footnotemark}
 \end{figure}
 
@@ -53,11 +53,11 @@ Wie häufig dies der Fall ist und welcher Anteil der Testgruppe nachuntersucht w
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\textwidth]{img/PoolPositiv}
+	\includegraphics[width=.35\textwidth]{img/PoolPositiv}
 	\caption{Ein positiven Pool kann die positive Person nicht identifizieren\footnotemark}
 \end{figure}
 \footnotetext{Eigene Darstellung}
-
+\cleardoublepage
 Hierdurch werden \textbf{Nachtestungen} der betroffenen Personen notwendig.
 Die Tests erfolgen hierbei nacheinander und sind statistisch unabhängig voneinander.
 Manche Methoden erfordern sogar mehrere sequenzielle Nachtestungen.\footcite{verwilt_evaluation_2021}
@@ -71,24 +71,27 @@ Um eine \textbf{Kontamination} durch das Pooling zu verhindern, sollte die kompl
 Die für den aktuellen Test notwendigen Proben werden hierbei entnommen und im Duplikat gepoolt.
 Für diesen Duplikationsschritt gibt es spezialisierte Laborgeräte, sodass dies in einem Arbeitsschritt für alle Proben durchgeführt werden kann - teilweise sogar automatisiert.\footcite{kendall_antigen-based_2021}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=.4\textwidth]{img/KomplexePools}
-	\caption{Überlappende Pools\footnotemark}
-\end{figure}
-\footnotetext{Eigene Darstellung}
+
 
 \textbf{Überlappende Pools}\newline
 Um das Problem der Nachtestungen zu lösen, kann man mehrere überlappende Tests durchführen.
 Aus der Kombination der Ergebnisse ist es theoretisch möglich, die infizierte Person zu triangulieren.\footcite{verwilt_evaluation_2021}
 
+\footnotetext{Eigene Darstellung}
 Schwierig wird es hierbei, wenn mehrere Personen innerhalb der Testgruppe positiv sind.
 Die positiven Tests lassen sich dann nicht mehr exakt einer Person zuordnen.\footcite{viehweger_increased_2020}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.35\textwidth]{img/KomplexePools}
+	\caption{Überlappende Pools\footnotemark}
+\end{figure}
+
 \cleardoublepage
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.4\textwidth]{img/MehrerePositiv}
+	\includegraphics[width=.35\textwidth]{img/MehrerePositiv}
 	\caption{Mehrere Positivfälle\footnotemark}
 \end{figure}
 \footnotetext{Eigene Darstellung}
@@ -100,7 +103,7 @@ Die Kosten der Testung erhöhen sich zudem für alle Testgruppen, da durch diese
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.8\textwidth]{img/GrossePooluebersicht}
+	\includegraphics[width=.7\textwidth]{img/GrossePooluebersicht}
 	\caption{Überlappende Pools\footnotemark}
 \end{figure}
 \footnotetext{Eigene Darstellung}
@@ -133,23 +136,24 @@ Die Übermittlung des Testergebnisses wird hierdurch stark verzögert, was ebenf
 Als \textbf{Effizienz} einer Poolingmethode wird nachfolgend der Multiplikator bezeichnet, welcher gegenüber Einzeltestungen erzielt werden kann.\footcite{viehweger_increased_2020}
 Diese ist Abhängig von der Größe der Testgruppe und der Anzahl der Tests die erforderlich sind, um den Infektionsstatus jeder Person zu klassifizieren.
 Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen}{Anzahl Tests} $.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.4\textwidth]{img/EffizienzNegativ}
+	\includegraphics[width=.3\textwidth]{img/PoolAlleNegativ}
 	\caption{\mbox{Effizienz eines} \mbox{negativen} Pools\footnotemark}
 \end{figure}
 \footnotetext{Eigene Darstellung}
 Im bestmöglichen Fall ist die gesamte Testgruppe nicht infiziert.
 Hierdurch fallen im ersten Durchlauf alle Tests negativ aus und die gesamte Testgruppe kann als negativ markiert werden.
-Im Beispiel der Abbildung 3.6 ergibt sich eine Effizienz von 3,0.
+Im Beispiel der Abbildung 3.6 ergibt sich eine Effizienz von 3,0 (3:1).
 
 Bei einem positiven Pool wird zunächst ein Pooltest benötigt und danach ein Einzeltest für jede Person.
 Die Effizienz lässt sich somit beschreiben als $\frac{Anzahl Testpersonen (N)}{1 Pooltest + N Einzeltests} $.
-Für Abbildung 3.7 liegt die Effizienz damit bei 0,75 und ist schlechter, als wenn direkt einzeln getestet worden wäre.
+Für Abbildung 3.7 liegt die Effizienz damit bei 0,75 (3:4) und ist schlechter, als wenn direkt einzeln getestet worden wäre.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.4\textwidth]{img/EffizienzPositiv}
+	\includegraphics[width=.3\textwidth]{img/EffizienzPositiv}
 	\caption{\mbox{Effizienz eines} \mbox{positiven Pools}\footnotemark}
 \end{figure}
 \footnotetext{Eigene Darstellung}
